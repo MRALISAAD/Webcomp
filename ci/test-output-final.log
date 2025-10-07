@@ -1,0 +1,27 @@
+
+> backend@1.0.0 test
+> jest --runInBand
+
+PASS __tests__/admin.test.js
+PASS __tests__/contact.test.js
+  ● Console
+
+    console.log
+      📧 Email envoyé à mr.alisaad@outlook.fr
+
+      at log (utils/mailer.js:61:11)
+          at async Promise.allSettled (index 0)
+
+    console.log
+      📧 Notification envoyée à l’équipe : admin@test.dev
+
+      at log (utils/mailer.js:88:11)
+          at async Promise.allSettled (index 1)
+
+PASS __tests__/health.test.js
+
+Test Suites: 3 passed, 3 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.222 s, estimated 2 s
+Ran all test suites.
