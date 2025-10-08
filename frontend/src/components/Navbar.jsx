@@ -1,86 +1,95 @@
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import Logo from './Logo.jsx';
+"use strict";
+
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const links = [
-  { to: '/', label: 'Accueil', exact: true },
-  { to: '/services', label: 'Services' },
-  { to: '/a-propos', label: 'A propos' },
-  { to: '/contact', label: 'Contact' },
-  { to: '/dashboard', label: 'Dashboard' },
+  { label: "Accueil", to: "/" },
+  { label: "Services", to: "/services" },
+  { label: "À propos", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+function Navbar() {
+  const [open, setOpen] = useState(false);
 
-  const linkClasses = ({ isActive }) =>
-    `block rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-      isActive
-        ? 'bg-white/20 text-white'
-        : 'text-white/80 hover:text-white hover:bg-white/10'
-    }`;
+  const handleToggle = () => {
+    setOpen((value) => !value);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-primary/40 bg-brand-primary/95 shadow-lg shadow-brand-primary/20 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 text-white">
-        <NavLink to="/" className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white">
-          <Logo className="h-9 w-auto text-white" />
-          Marhaba Canada
-        </NavLink>
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <Link
+          to="/"
+          className="flex items-center gap-3 text-lg font-semibold text-brand-red transition hover:text-brand-dark"
+          onClick={handleClose}
+        >
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-red text-white">
+            MC
+          </span>
+          Marhaban Canada
+        </Link>
         <button
           type="button"
-          className="inline-flex items-center rounded-full border border-white/30 px-3 py-2 text-white/80 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white sm:hidden"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Basculer le menu"
+          className="inline-flex items-center justify-center rounded-md p-2 text-slate-600 transition hover:bg-brand-pale hover:text-brand-red lg:hidden"
+          onClick={handleToggle}
+          aria-expanded={open}
+          aria-label="Menu"
         >
-          <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            {open ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4 6h16M4 12h16M4 18h16" />
+            )}
           </svg>
         </button>
-        <div className="hidden items-center gap-1 sm:flex">
-          {links.map((link) => (
+        <div className="hidden items-center gap-6 lg:flex">
+          {links.map((item) => (
             <NavLink
-              key={link.to}
-              to={link.to}
-              className={linkClasses}
-              end={link.exact}
-              onClick={() => setIsOpen(false)}
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                [
+                  "text-sm font-medium transition",
+                  isActive ? "text-brand-red" : "text-slate-600 hover:text-brand-red",
+                ].join(" ")
+              }
+              onClick={handleClose}
             >
-              {link.label}
+              {item.label}
             </NavLink>
           ))}
-          <Link
-            to="/contact"
-            className="ml-3 inline-flex items-center rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-brand-primary"
-          >
-            Reserver maintenant
-          </Link>
         </div>
       </nav>
-      {isOpen && (
-        <div className="border-t border-white/10 bg-brand-primary px-4 py-3 sm:hidden">
-          <div className="flex flex-col gap-2">
-            {links.map((link) => (
+      {open && (
+        <div className="border-t border-slate-200 bg-white lg:hidden">
+          <div className="space-y-2 px-4 py-4">
+            {links.map((item) => (
               <NavLink
-                key={link.to}
-                to={link.to}
-                className={linkClasses}
-                end={link.exact}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </NavLink>
-            ))}
-            <Link
-              to="/contact"
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
-              onClick={() => setIsOpen(false)}
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  [
+                    "block rounded-lg px-3 py-2 text-sm font-semibold transition",
+                    isActive ? "bg-brand-pale text-brand-red" : "text-slate-700 hover:bg-brand-pale hover:text-brand-red",
+                  ].join(" ")
+              }
+              onClick={handleClose}
             >
-              Reserver maintenant
-            </Link>
+              {item.label}
+            </NavLink>
+          ))}
           </div>
         </div>
       )}
     </header>
   );
 }
+
+export default Navbar;

@@ -1,0 +1,8 @@
+marhabancanada.ca, www.marhabancanada.ca {
+    encode gzip
+    reverse_proxy frontend:80
+}
+admin.marhabancanada.ca {
+    encode gzip
+    reverse_proxy backend:5000
+}
