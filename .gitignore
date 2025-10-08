@@ -42,3 +42,21 @@ yarn-error.log
 .idea/
 .cache/
 parcel-cache/
+
+# local envs and caches
+.env
+.env.local
+.env.*.local
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+.DS_Store
+Thumbs.db
+npm-debug.log
+yarn-error.log
+.vscode/
+.idea/
+.cache/
+parcel-cache/
