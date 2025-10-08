@@ -1,0 +1,1 @@
+npx eslint . --ext .js,.jsx,.ts,.tsx --fix failed: registry.npmjs.org unreachable (getaddrinfo EAI_AGAIN) under restricted network.

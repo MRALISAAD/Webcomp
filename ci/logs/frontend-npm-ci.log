@@ -38,7 +38,7 @@ npm ERR!       46, 53, 10
 npm ERR!     ],
 npm ERR!     Buffer(0) [Uint8Array] []
 npm ERR!   ],
-npm ERR!   pid: 7504,
+npm ERR!   pid: 7850,
 npm ERR!   stdout: Buffer(7) [Uint8Array] [
 npm ERR!     48, 46, 50, 49,
 npm ERR!     46, 53, 10
