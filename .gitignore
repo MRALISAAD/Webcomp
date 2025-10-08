@@ -1,18 +1,25 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+admin/.env
+
 # Node artifacts
 node_modules/
 **/node_modules/
 
-# Environment files
-.env
-backend/.env
-frontend/.env
-.env.local
-admin/.env
-
 # Build outputs
+dist/
+build/
+coverage/
+.nyc_output/
 frontend/dist/
 admin/dist/
-coverage/
+!cleanup/removed/ci/**
+!cleanup/removed/frontend/**
+!cleanup/duplicates/**
 
 # Logs
 npm-debug.log*
@@ -20,43 +27,13 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Cache directories
+.cache/
+parcel-cache/
+.expo/
+
 # Misc
 .DS_Store
-.env
-.env
-
-# local envs and caches
-.env
-.env.local
-.env.*.local
-node_modules/
-dist/
-build/
-coverage/
-.nyc_output/
-.DS_Store
 Thumbs.db
-npm-debug.log
-yarn-error.log
 .vscode/
 .idea/
-.cache/
-parcel-cache/
-
-# local envs and caches
-.env
-.env.local
-.env.*.local
-node_modules/
-dist/
-build/
-coverage/
-.nyc_output/
-.DS_Store
-Thumbs.db
-npm-debug.log
-yarn-error.log
-.vscode/
-.idea/
-.cache/
-parcel-cache/
