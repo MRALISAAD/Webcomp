@@ -1,58 +1,40 @@
-# webcomp
+# Marhaban Canada v1.0
 
-## Installation rapide
+Site vitrine multilingue (FR/EN/AR) connecté à un backend Express pour créer des leads Zoho CRM et envoyer un accusé de réception via Zoho Mail.
 
-1. Copier `.env.example` vers `backend/.env` et remplir les vraies valeurs (MongoDB, JWT, Zoho OAuth, SMTP Zoho). Ne validez jamais ce fichier.
-2. Installer les dépendances dans chaque dossier (`backend`, `frontend`, `admin`).
-3. Lancer les services :
-   ```sh
-   # Backend
-   cd backend && npm run dev
-
-   # Frontend public
-   cd frontend && npm run dev
-
-   # Dashboard admin
-   cd admin && npm run dev
-   ```
-
-Le backend expose un serveur Express protégé par `helmet`, un rate limit et une journalisation Pino. Les routes admin nécessitent un JWT signé avec `JWT_SECRET` (durée configurable via `ADMIN_JWT_TTL`). Pour créer un compte admin hors production, activez temporairement `ENABLE_ADMIN_REGISTER=true` dans `backend/.env` ou utilisez le script `backend/scripts/createAdmin.js`.
-
-### Intégrations externes
-
-- **Zoho CRM** : renseigner `ZOHO_CLIENT_ID`, `ZOHO_CLIENT_SECRET` et `ZOHO_REFRESH_TOKEN` pour créer automatiquement un lead à chaque soumission de formulaire.
-- **Emails** : fournir `MAIL_USER`/`MAIL_PASS` (mot de passe d’application Zoho) ainsi que `MAIL_HOST` et `MAIL_PORT` pour envoyer l’accusé de réception et la notification interne.
-
-## Tester l'API (exemples Fetch)
-
-```js
-// Ajouter une demande (publique)
-await fetch(`${process.env.API_BASE_URL}/api/contact`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    nom: 'Ali Saad',
-    email: 'ali@example.com',
-    service: 'Transport VIP',
-    message: "Merci pour l'accompagnement",
-  }),
-})
-  .then((res) => res.json())
-  .then(console.log)
-  .catch(console.error);
-
-// Authentifier un admin et récupérer les demandes
-const loginResponse = await fetch(`${process.env.API_BASE_URL}/api/admin/login`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ username: 'admin', password: 'motDePasse+++' }),
-});
-const { token } = await loginResponse.json();
-
-await fetch(`${process.env.API_BASE_URL}/api/admin/demandes`, {
-  headers: { Authorization: `Bearer ${token}` },
-})
-  .then((res) => res.json())
-  .then(console.log)
-  .catch(console.error);
+## Installation
 ```
+cd backend
+cp .env.example .env
+npm install
+
+cd ../frontend
+npm install
+```
+
+## Démarrage local
+- Terminal A → `cd backend && npm run dev`
+- Terminal B → `cd frontend && npm run dev`
+
+## Build production
+```
+cd frontend
+npm run build
+```
+Les fichiers `robots.txt` et `sitemap.xml` sont copiés automatiquement dans `dist/` après le build.
+
+## Notes Zoho
+- Créer les champs personnalisés `Custom_Pack__c` et `Arrival_Date__c` dans le module Leads.
+- Le token d’accès repose sur `ZOHO_REFRESH_TOKEN`, `ZOHO_CLIENT_ID`, `ZOHO_CLIENT_SECRET`, `ZOHO_ACCOUNTS_URL` et `ZOHO_BASE_URL` (voir `.env.example`).
+- Recommandé : workflow Zoho "On Create Lead" pour automatiser les notifications internes.
+
+## QA
+✅ `/contact` → Lead créé dans Zoho + email d’accusé réception reçu
+✅ Formulaire responsive, validation FR/EN/AR, mode sombre/clair, tracking UTM
+✅ Lighthouse ≥ 85 (Performance & Accessibilité)
+✅ Sitemap & robots prêts pour déploiement marhabancanada.ca / api.marhabancanada.ca
+
+## Déploiement
+- Backend : toute plateforme Node.js (Render, Railway, Hostinger). Exposer `PORT` et variables Zoho.
+- Frontend : Vite static build (Netlify, Vercel, Cloudflare Pages). Configurer le proxy `/api` si nécessaire.
+- Mettre à jour le `VITE_API_BASE_URL` pour pointer vers `https://api.marhabancanada.ca` lors du build de production.

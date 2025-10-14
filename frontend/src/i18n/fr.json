@@ -1,0 +1,229 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "services": "Services",
+    "packs": "Packs",
+    "about": "À propos",
+    "testimonials": "Témoignages",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Votre arrivée au Canada, sans stress 🇨🇦",
+    "subtitle": "Logement, démarches, accueil — tout est prêt avant votre arrivée.",
+    "cta_primary": "Réserver mon pack",
+    "cta_secondary": "Parler à un conseiller"
+  },
+  "home": {
+    "highlights": [
+      {
+        "title": "Accueil personnalisé",
+        "description": "Votre concierge vous accompagne de l'aéroport à votre nouveau logement."
+      },
+      {
+        "title": "Formalités rapides",
+        "description": "Nous prenons en charge vos démarches administratives prioritaires."
+      },
+      {
+        "title": "Installation sereine",
+        "description": "Services bancaires, téléphonie, scolarité : tout est anticipé."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services sur mesure",
+    "subtitle": "Une équipe francophone, anglophone et arabophone dédiée à votre installation.",
+    "items": [
+      {
+        "title": "Préparation avant départ",
+        "description": "Visa, logement temporaire, ouverture de dossier auprès des organismes canadiens."
+      },
+      {
+        "title": "Accueil à l'aéroport",
+        "description": "Transfert privé, carte SIM, briefing sur les premières démarches."
+      },
+      {
+        "title": "Installation complète",
+        "description": "Accompagnement bancaire, santé, assurance, écoles et intégration locale."
+      }
+    ]
+  },
+  "packs": {
+    "title": "Nos packs d'arrivée",
+    "subtitle": "Des offres transparentes adaptées à votre profil.",
+    "list": [
+      {
+        "name": "Pack Essentiel",
+        "price": "299$",
+        "value": "Essentiel",
+        "features": [
+          "Accueil à l'aéroport",
+          "Installation dans un logement provisoire",
+          "Checklist des démarches prioritaires"
+        ]
+      },
+      {
+        "name": "Pack Confort",
+        "price": "549$",
+        "value": "Confort",
+        "features": [
+          "Pack Essentiel",
+          "Accompagnement administratif complet",
+          "Rendez-vous bancaires et santé"
+        ]
+      },
+      {
+        "name": "Pack Premium",
+        "price": "899$",
+        "value": "Premium",
+        "features": [
+          "Pack Confort",
+          "Coaching intégration professionnelle",
+          "Suivi personnalisé 30 jours"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Marhaban Canada",
+    "subtitle": "Une équipe d'expatriés et de professionnels de l'installation depuis plus de 8 ans.",
+    "values": [
+      {
+        "title": "Expertise locale",
+        "description": "Nous collaborons avec un réseau d'institutions et de partenaires fiables."
+      },
+      {
+        "title": "Multilingue",
+        "description": "Accompagnement complet en français, anglais et arabe."
+      },
+      {
+        "title": "Humain avant tout",
+        "description": "Chaque famille bénéficie d'un plan d'installation personnalisé."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ils nous ont fait confiance",
+    "subtitle": "Des arrivées réussies partout au Canada.",
+    "items": [
+      {
+        "name": "Nadia & Karim",
+        "country": "Casablanca → Montréal",
+        "message": "Un service impeccable grâce auquel nous avons trouvé un logement dès le premier jour."
+      },
+      {
+        "name": "Sarah",
+        "country": "Paris → Toronto",
+        "message": "L'équipe nous a aidés à obtenir rapidement toutes nos assurances et numéros officiels."
+      },
+      {
+        "name": "Famille Benali",
+        "country": "Alger → Québec",
+        "message": "Nous avons été pris en charge dès la sortie de l'avion. Transition fluide et rassurante."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Partagez votre projet et recevez une proposition adaptée en moins de 24h.",
+    "details": {
+      "phone": "+1 (514) 555-0199",
+      "email": "bonjour@marhaban.ca",
+      "address": "1250 René-Lévesque O, Montréal QC"
+    },
+    "labels": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse"
+    },
+    "form": {
+      "fullName": "Nom complet*",
+      "email": "Email*",
+      "whatsapp": "Numéro WhatsApp*",
+      "city": "Ville de destination",
+      "arrivalType": "Type d’arrivée",
+      "budget": "Budget logement ($/mois)",
+      "arrivalDate": "Date d’arrivée",
+      "pack": "Pack souhaité",
+      "message": "Message (optionnel)",
+      "consent": "J’autorise Marhaban Canada à me contacter par e-mail ou WhatsApp.",
+      "submit": "Envoyer ma demande",
+      "cityOptions": [
+        "Montréal",
+        "Laval",
+        "Québec",
+        "Toronto",
+        "Autre"
+      ],
+      "arrivalTypeOptions": [
+        "Étudiant",
+        "Travailleur",
+        "Famille"
+      ],
+      "packOptions": [
+        "Essentiel",
+        "Confort",
+        "Premium",
+        "Indécis"
+      ],
+      "status": {
+        "loading": "Envoi...",
+        "invalid": "Veuillez remplir tous les champs requis.",
+        "success": "✅ Demande envoyée avec succès !",
+        "errorPrefix": "❌ Erreur : "
+      }
+    },
+    "cta": "Envoyer ma demande"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Nous avons rassemblé les réponses aux doutes les plus fréquents.",
+    "items": [
+      {
+        "question": "Combien de temps à l'avance dois-je réserver ?",
+        "answer": "Idéalement 4 à 6 semaines avant votre arrivée pour garantir logement et services."
+      },
+      {
+        "question": "Travaillez-vous avec toutes les provinces ?",
+        "answer": "Oui, nous couvrons le Québec, l'Ontario, la Colombie-Britannique et les provinces atlantiques."
+      },
+      {
+        "question": "Le service est-il disponible pour les étudiants ?",
+        "answer": "Absolument. Nous proposons des packs spéciaux pour étudiants et jeunes professionnels."
+      },
+      {
+        "question": "Proposez-vous un suivi après l'installation ?",
+        "answer": "Le pack Premium inclut 30 jours de suivi. Des options supplémentaires sont disponibles."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Votre partenaire bilingue pour une installation sereine au Canada.",
+    "rights": "Tous droits réservés."
+  },
+  "seo": {
+    "home": {
+      "title": "Accueil",
+      "description": "Marhaban Canada accompagne votre arrivée au Canada : logement, démarches et accueil sur mesure."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Découvrez nos services d'installation au Canada, du visa à l'intégration."
+    },
+    "packs": {
+      "title": "Packs",
+      "description": "Comparez nos packs d'arrivée selon vos besoins et votre budget."
+    },
+    "about": {
+      "title": "À propos",
+      "description": "En savoir plus sur l'équipe Marhaban Canada et notre expertise d'accompagnement."
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "description": "Lisez les témoignages des familles accompagnées par Marhaban Canada."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contactez Marhaban Canada et recevez une proposition personnalisée."
+    }
+  }
+}

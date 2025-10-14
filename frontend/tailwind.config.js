@@ -1,22 +1,18 @@
-module.exports = {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+export default {
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        brand: {
-          red: '#d32f2f',
-          dark: '#b71c1c',
-          pale: '#fde8e8',
-          gray: '#eef2f5',
-        },
+        primary: "#E63946",
+        navy: "#1D3557",
+        trust: "#4CAF50",
+        bg: "#FFFFFF",
+        muted: "#F7F7F7",
+        ink: "#1C1C1C"
       },
-      fontFamily: {
-        sans: ['Poppins', 'Inter', 'system-ui', 'Arial', 'sans-serif'],
-      },
-      boxShadow: {
-        soft: '0 10px 30px -15px rgba(211, 47, 47, 0.4)',
-      },
-    },
+      container: { center: true, padding: "20px" }
+    }
   },
-  plugins: [],
+  plugins: []
 };
