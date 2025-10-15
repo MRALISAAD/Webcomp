@@ -1,0 +1,298 @@
+{
+  "siteName": "Marhaban Canada",
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "packs": "Packs",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "testimonials": "Témoignages",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "footer": {
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d’utilisation",
+    "address": "Montréal, Québec",
+    "emailLabel": "Contact",
+    "whatsappCta": "WhatsApp",
+    "rights": "© {{year}} Marhaban Canada. Tous droits réservés."
+  },
+  "hero": {
+    "title": "Votre arrivée au Canada, sans stress.",
+    "subtitle": "Logement, démarches, accueil — tout est prêt avant votre arrivée.",
+    "ctaPrimary": "Réserver mon pack",
+    "ctaSecondary": "Parler à un conseiller"
+  },
+  "features": {
+    "title": "4 atouts pour une installation sereine",
+    "items": [
+      {
+        "title": "Accueil personnalisé",
+        "description": "Votre concierge vous accompagne dès l’aéroport jusqu’à votre logement."
+      },
+      {
+        "title": "Formalités rapides",
+        "description": "NAS, carte SIM, banque, assurance… on s’occupe des priorités."
+      },
+      {
+        "title": "Installation sereine",
+        "description": "Logement, meubles, électricité, internet : on vous guide pas à pas."
+      },
+      {
+        "title": "Accompagnement humain",
+        "description": "Français, anglais, arabe : on reste à vos côtés avant, pendant et après."
+      }
+    ]
+  },
+  "steps": {
+    "title": "Comment ça marche",
+    "items": [
+      "Réservez votre pack",
+      "Préparez vos documents",
+      "Arrivez au Canada (accueil aéroport)",
+      "Installez-vous en toute sérénité (suivi)"
+    ]
+  },
+  "cta": {
+    "reserve": "Réserver mon pack",
+    "whatsapp": "Parler à un conseiller",
+    "discoverPacks": "Découvrir nos packs",
+    "contactTeam": "Contacter notre équipe"
+  },
+  "testimonials": {
+    "title": "Ils nous ont fait confiance",
+    "ctaAll": "Voir tous les témoignages"
+  },
+  "trust": {
+    "title": "Partenaires de confiance"
+  },
+  "pricing": {
+    "title": "Choisissez votre pack",
+    "subtitle": "Des offres flexibles selon votre projet d’arrivée.",
+    "featuresLabel": "Services inclus",
+    "badgePopular": "Populaire",
+    "badgeAllInclusive": "Tout inclus"
+  },
+  "faq": {
+    "title": "FAQ",
+    "intro": "Les réponses aux questions les plus fréquentes.",
+    "items": [
+      {
+        "question": "Combien de temps à l’avance dois-je réserver ?",
+        "answer": "Idéalement 4 à 6 semaines avant votre arrivée pour garantir les meilleures disponibilités."
+      },
+      {
+        "question": "Couvrez-vous toutes les provinces ?",
+        "answer": "Québec, Ontario, Colombie-Britannique et provinces atlantiques. Contactez-nous pour les autres régions."
+      },
+      {
+        "question": "Vos services sont-ils adaptés aux étudiants ?",
+        "answer": "Oui, nous avons des offres dédiées et un accompagnement pour les démarches universitaires."
+      },
+      {
+        "question": "Y a-t-il un suivi après l’installation ?",
+        "answer": "Le pack Premium inclut 30 jours de suivi, prolongeable selon vos besoins."
+      },
+      {
+        "question": "Aidez-vous pour les démarches administratives ?",
+        "answer": "Oui : NAS, banque, RAMQ, téléphone, assurances et plus encore selon le pack choisi."
+      },
+      {
+        "question": "Êtes-vous multilingues ?",
+        "answer": "FR / EN / AR. Nous adaptons notre accompagnement à votre langue."
+      },
+      {
+        "question": "Que se passe-t-il si mon visa est retardé ?",
+        "answer": "Nous replanifions sans frais d’agence; seuls les frais tiers déjà engagés restent dus."
+      },
+      {
+        "question": "Pouvez-vous garantir un logement ?",
+        "answer": "Réservation confirmée en Standard et Premium selon votre dossier et le marché."
+      },
+      {
+        "question": "Travaillez-vous avec des partenaires ?",
+        "answer": "Banques, opérateurs, établissements — transparence totale sur nos affiliations."
+      },
+      {
+        "question": "Mes données sont-elles protégées ?",
+        "answer": "Oui, nous respectons la confidentialité. Consultez notre Politique de confidentialité."
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog Marhaban Canada",
+    "intro": "Conseils et ressources pour préparer votre installation au Canada.",
+    "readMore": "Lire l’article",
+    "loadMore": "Charger plus",
+    "publishedOn": "Publié le {{date}}",
+    "minutesRead": "{{minutes}} min",
+    "backToList": "Retour au blog",
+    "toc": "Sommaire",
+    "breadcrumbs": {
+      "home": "Accueil",
+      "blog": "Blog"
+    }
+  },
+  "about": {
+    "title": "Notre mission",
+    "mission": "Faciliter l’installation des nouveaux arrivants francophones au Canada avec un accompagnement humain, multilingue et personnalisé.",
+    "valuesTitle": "Nos valeurs",
+    "values": [
+      {
+        "title": "Bienveillance",
+        "description": "Chaque parcours est unique : nous adaptons nos services à votre réalité."
+      },
+      {
+        "title": "Fiabilité",
+        "description": "Des partenaires vérifiés et des processus documentés à chaque étape."
+      },
+      {
+        "title": "Transparence",
+        "description": "Un budget clair, des délais communiqués, des engagements tenus."
+      }
+    ],
+    "teamTitle": "Rencontrez l’équipe",
+    "team": [
+      {
+        "name": "Salma",
+        "role": "Fondatrice & CEO"
+      },
+      {
+        "name": "Karim",
+        "role": "Concierge installation"
+      },
+      {
+        "name": "Noura",
+        "role": "Spécialiste démarches"
+      },
+      {
+        "name": "Emily",
+        "role": "Coach carrière"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Vous avez une question ou un projet ? Écrivez-nous — nous répondons sous 24h (jours ouvrables).",
+    "intro": "Une question ? Notre équipe vous répond rapidement. Écrivez-nous ou passez par WhatsApp.",
+    "formTitle": "Parlez-nous de votre arrivée",
+    "formSubtitle": "Complétez le formulaire et nous vous rappelons sous 24h (jours ouvrables).",
+    "whatsappMessage": "Bonjour Marhaban Canada, je souhaite parler avec un conseiller.",
+    "details": {
+      "phoneTitle": "Téléphone",
+      "phoneDescription": "Parlons-en de vive voix.",
+      "phonePlaceholder": "Bientôt disponible",
+      "emailTitle": "Email",
+      "emailDescription": "contact@marhabancanada.ca",
+      "addressTitle": "Adresse",
+      "addressDescription": "Montréal, Québec",
+      "whatsappTitle": "WhatsApp",
+      "whatsappDescription": "Échange direct avec un conseiller.",
+      "whatsappAction": "Discuter maintenant"
+    },
+    "form": {
+      "labels": {
+        "fullName": "Nom complet",
+        "email": "Courriel",
+        "country": "Pays d’origine",
+        "desiredPack": "Pack souhaité",
+        "message": "Message (min. 20 caractères)",
+        "consent": "Consentement"
+      },
+      "placeholders": {
+        "fullName": "Votre nom et prénom",
+        "email": "nom@exemple.com",
+        "country": "Pays actuel ou de départ",
+        "desiredPack": "Sélectionnez un pack (optionnel)",
+        "message": "Parlez-nous de votre arrivée, des dates envisagées, de vos besoins…"
+      },
+      "packPlaceholder": "Sans préférence",
+      "consent": "J’accepte que mes informations soient utilisées pour me recontacter (voir Politique de confidentialité).",
+      "submit": "Envoyer ma demande",
+      "submitLoading": "Envoi en cours…",
+      "successTitle": "Demande envoyée",
+      "success": "Merci ! Un membre de l’équipe vous contactera sous 24h.",
+      "errorTitle": "Envoi impossible",
+      "error": "Impossible d’envoyer, réessayez."
+    },
+    "sidebar": {
+      "hoursTitle": "Horaires de réponse",
+      "hoursDescription": "Lundi au vendredi — 9h à 18h (heure de Montréal).",
+      "note": "Notre équipe multilingue (FR/EN/AR) vous accompagne à chaque étape. Vous n’êtes pas seul.",
+      "gdpr": "Vos données restent confidentielles et utilisées uniquement pour vous recontacter.",
+      "testimonial": "“Grâce à Marhaban Canada, mon arrivée à Montréal a été beaucoup plus simple.” — A., France",
+      "privacyLink": "Voir notre Politique de confidentialité"
+    }
+  },
+  "form": {
+    "errors": {
+      "fullName": "Merci d’indiquer votre nom.",
+      "email": "Adresse courriel invalide.",
+      "country": "Merci d’indiquer votre pays si nécessaire.",
+      "desiredPack": "Sélectionnez un pack.",
+      "message": "Votre message doit contenir au moins 20 caractères.",
+      "consent": "Merci d’accepter notre consentement RGPD."
+    }
+  },
+  "toast": {
+    "success": "Demande envoyée",
+    "error": "Impossible d’envoyer la demande"
+  },
+  "cookie": {
+    "message": "Nous utilisons des cookies analytiques pour améliorer votre expérience. En poursuivant, vous acceptez notre Politique de confidentialité.",
+    "accept": "Compris"
+  },
+  "language": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English"
+  },
+  "theme": {
+    "light": "Mode clair",
+    "dark": "Mode sombre"
+  },
+  "seo": {
+    "home": {
+      "title": "Marhaban Canada — Packs d’installation pour nouveaux arrivants",
+      "description": "Accueil aéroport, démarches administratives, logement et suivi humain pour votre arrivée au Canada.",
+      "path": "/"
+    },
+    "packs": {
+      "title": "Packs d’installation Basique, Standard et Premium | Marhaban Canada",
+      "description": "Comparez nos packs d’installation et choisissez le service adapté à votre arrivée au Canada.",
+      "path": "/packs"
+    },
+    "faq": {
+      "title": "FAQ Marhaban Canada — questions fréquentes",
+      "description": "Tout savoir sur nos services, nos délais et notre accompagnement pour votre installation.",
+      "path": "/faq"
+    },
+    "blog": {
+      "title": "Blog Marhaban Canada — Conseils arrivée Canada",
+      "description": "Guides pratiques et conseils pour préparer votre installation au Canada.",
+      "path": "/blog"
+    },
+    "testimonials": {
+      "title": "Témoignages clients Marhaban Canada",
+      "description": "Découvrez les retours d’expérience de familles, étudiants et travailleurs accompagnés.",
+      "path": "/temoignages"
+    },
+    "about": {
+      "title": "À propos de Marhaban Canada",
+      "description": "Notre mission, nos valeurs et l’équipe qui vous accueille au Canada.",
+      "path": "/a-propos"
+    },
+    "contact": {
+      "title": "Contact Marhaban Canada",
+      "description": "Parlez à un conseiller et obtenez un plan d’installation sur mesure.",
+      "path": "/contact"
+    },
+    "notFound": {
+      "title": "Page introuvable — Marhaban Canada",
+      "description": "La page demandée n’existe pas ou a été déplacée.",
+      "path": "/404"
+    }
+  }
+}

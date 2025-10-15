@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">Illustration abstraite représentant une personne.</desc>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#25D366"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="24" fill="url(#gradient)"/>
+  <g fill="#fff" opacity="0.85">
+    <circle cx="160" cy="120" r="56"/>
+    <path d="M80 260c0-44.183 35.817-80 80-80s80 35.817 80 80H80z"/>
+  </g>
+</svg>

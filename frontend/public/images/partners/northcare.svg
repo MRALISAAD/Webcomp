@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60" role="img" aria-labelledby="title">
+  <title id="title">Northcare Assurance</title>
+  <rect width="180" height="60" rx="12" fill="#F5F5F5" />
+  <path d="M40 18h20l-10 24z" fill="#1D3557" />
+  <text x="70" y="36" font-family="'Montserrat', sans-serif" font-size="16" fill="#1C1C1C">Northcare</text>
+</svg>

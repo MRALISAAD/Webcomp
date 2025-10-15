@@ -1,0 +1,298 @@
+{
+  "siteName": "Marhaban Canada",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "packs": "Packs",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "testimonials": "Testimonials",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "address": "Montreal, Quebec",
+    "emailLabel": "Contact",
+    "whatsappCta": "WhatsApp",
+    "rights": "© {{year}} Marhaban Canada. All rights reserved."
+  },
+  "hero": {
+    "title": "Your arrival in Canada, stress-free.",
+    "subtitle": "Housing, paperwork, airport welcome — everything is ready before you land.",
+    "ctaPrimary": "Book my pack",
+    "ctaSecondary": "Talk to an advisor"
+  },
+  "features": {
+    "title": "4 reasons to land with peace of mind",
+    "items": [
+      {
+        "title": "Tailored welcome",
+        "description": "Your concierge accompanies you from the airport to your housing."
+      },
+      {
+        "title": "Fast-track paperwork",
+        "description": "SIN, SIM card, banking, insurance… we handle the priorities."
+      },
+      {
+        "title": "Smooth installation",
+        "description": "Housing, furniture, electricity, internet: we guide you step by step."
+      },
+      {
+        "title": "Human support",
+        "description": "French, English, Arabic: we stay by your side before, during and after."
+      }
+    ]
+  },
+  "steps": {
+    "title": "How it works",
+    "items": [
+      "Book your pack",
+      "Prepare your documents",
+      "Arrive in Canada (airport welcome)",
+      "Settle in with peace of mind (ongoing support)"
+    ]
+  },
+  "cta": {
+    "reserve": "Book my pack",
+    "whatsapp": "Talk to an advisor",
+    "discoverPacks": "Discover our packs",
+    "contactTeam": "Contact our team"
+  },
+  "testimonials": {
+    "title": "They trusted us",
+    "ctaAll": "View all testimonials"
+  },
+  "trust": {
+    "title": "Trusted partners"
+  },
+  "pricing": {
+    "title": "Choose your pack",
+    "subtitle": "Flexible offers for every newcomer journey.",
+    "featuresLabel": "Included services",
+    "badgePopular": "Popular",
+    "badgeAllInclusive": "All inclusive"
+  },
+  "faq": {
+    "title": "FAQ",
+    "intro": "Get answers to the most frequent questions.",
+    "items": [
+      {
+        "question": "How far in advance should I book?",
+        "answer": "Ideally 4 to 6 weeks before arrival to secure the best availabilities."
+      },
+      {
+        "question": "Do you cover every province?",
+        "answer": "Quebec, Ontario, British Columbia and the Atlantic provinces. Contact us for other regions."
+      },
+      {
+        "question": "Are your services suited for students?",
+        "answer": "Yes, we provide dedicated offers and support for university paperwork."
+      },
+      {
+        "question": "Is there support after installation?",
+        "answer": "The Premium pack includes 30 days of follow-up, extendable on demand."
+      },
+      {
+        "question": "Do you help with administrative paperwork?",
+        "answer": "Yes: SIN, banking, RAMQ, phone plans, insurance and more depending on the pack."
+      },
+      {
+        "question": "Are you multilingual?",
+        "answer": "FR / EN / AR. We adapt our support to your language."
+      },
+      {
+        "question": "What happens if my visa is delayed?",
+        "answer": "We reschedule without agency fees; only third-party costs already incurred remain due."
+      },
+      {
+        "question": "Can you guarantee housing?",
+        "answer": "Confirmed bookings in Standard and Premium depending on your file and the market."
+      },
+      {
+        "question": "Do you work with partners?",
+        "answer": "Banks, providers, institutions — full transparency on our partnerships."
+      },
+      {
+        "question": "Is my data protected?",
+        "answer": "Yes, confidentiality is key. See our Privacy Policy."
+      }
+    ]
+  },
+  "blog": {
+    "title": "Marhaban Canada blog",
+    "intro": "Tips and resources to prepare your move to Canada.",
+    "readMore": "Read article",
+    "loadMore": "Load more",
+    "publishedOn": "Published on {{date}}",
+    "minutesRead": "{{minutes}} min",
+    "backToList": "Back to blog",
+    "toc": "Summary",
+    "breadcrumbs": {
+      "home": "Home",
+      "blog": "Blog"
+    }
+  },
+  "about": {
+    "title": "Our mission",
+    "mission": "We support French-speaking newcomers with human, multilingual and tailored services.",
+    "valuesTitle": "Our values",
+    "values": [
+      {
+        "title": "Care",
+        "description": "Every journey is unique: we adapt our services to your reality."
+      },
+      {
+        "title": "Reliability",
+        "description": "Verified partners and documented processes at every step."
+      },
+      {
+        "title": "Transparency",
+        "description": "Clear budget, communicated timelines, commitments we stand by."
+      }
+    ],
+    "teamTitle": "Meet the team",
+    "team": [
+      {
+        "name": "Salma",
+        "role": "Founder & CEO"
+      },
+      {
+        "name": "Karim",
+        "role": "Installation concierge"
+      },
+      {
+        "name": "Noura",
+        "role": "Paperwork specialist"
+      },
+      {
+        "name": "Emily",
+        "role": "Career coach"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a question or project? Write to us — we reply within 24h (business days).",
+    "intro": "Have a question? Our team replies quickly. Write to us or reach out on WhatsApp.",
+    "formTitle": "Tell us about your arrival",
+    "formSubtitle": "Fill the form and we’ll call you back within 24h (business days).",
+    "whatsappMessage": "Hello Marhaban Canada, I would like to talk with an advisor.",
+    "details": {
+      "phoneTitle": "Phone",
+      "phoneDescription": "Let’s talk directly.",
+      "phonePlaceholder": "Coming soon",
+      "emailTitle": "Email",
+      "emailDescription": "contact@marhabancanada.ca",
+      "addressTitle": "Address",
+      "addressDescription": "Montreal, Quebec",
+      "whatsappTitle": "WhatsApp",
+      "whatsappDescription": "Direct chat with an advisor.",
+      "whatsappAction": "Chat now"
+    },
+    "form": {
+      "labels": {
+        "fullName": "Full name",
+        "email": "Email",
+        "country": "Country of origin",
+        "desiredPack": "Desired pack",
+        "message": "Message (min. 20 characters)",
+        "consent": "Consent"
+      },
+      "placeholders": {
+        "fullName": "Your first and last name",
+        "email": "name@example.com",
+        "country": "Current country or departure",
+        "desiredPack": "Select a pack (optional)",
+        "message": "Tell us about your arrival, target dates and needs…"
+      },
+      "packPlaceholder": "No preference",
+      "consent": "I agree that my information will be used to contact me (see Privacy Policy).",
+      "submit": "Send my request",
+      "submitLoading": "Sending…",
+      "successTitle": "Request sent",
+      "success": "Thank you! Someone from the team will contact you within 24h.",
+      "errorTitle": "Send failed",
+      "error": "We couldn’t send your request, please try again."
+    },
+    "sidebar": {
+      "hoursTitle": "Response hours",
+      "hoursDescription": "Monday to Friday — 9am to 6pm (Montreal time).",
+      "note": "Our multilingual team (FR/EN/AR) guides you at every step. You’re not alone.",
+      "gdpr": "Your data stays confidential and is only used to reach back to you.",
+      "testimonial": "“Thanks to Marhaban Canada, settling in Montreal was so much easier.” — A., France",
+      "privacyLink": "Read our Privacy Policy"
+    }
+  },
+  "form": {
+    "errors": {
+      "fullName": "Please provide your name.",
+      "email": "Invalid email address.",
+      "country": "Please share your country if relevant.",
+      "desiredPack": "Please choose a pack.",
+      "message": "Your message must be at least 20 characters.",
+      "consent": "Please accept our consent statement."
+    }
+  },
+  "toast": {
+    "success": "Request sent",
+    "error": "Request failed"
+  },
+  "cookie": {
+    "message": "We use analytics cookies to improve your experience. By continuing, you agree to our Privacy Policy.",
+    "accept": "Got it"
+  },
+  "language": {
+    "label": "Language",
+    "fr": "Français",
+    "en": "English"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "seo": {
+    "home": {
+      "title": "Marhaban Canada — Settlement packs for newcomers",
+      "description": "Airport welcome, paperwork, housing and human follow-up for your arrival in Canada.",
+      "path": "/"
+    },
+    "packs": {
+      "title": "Basic, Standard and Premium settlement packs | Marhaban Canada",
+      "description": "Compare our settlement packs and choose the right support for your move to Canada.",
+      "path": "/packs"
+    },
+    "faq": {
+      "title": "Marhaban Canada FAQ — frequently asked questions",
+      "description": "Learn everything about our services, timelines and support.",
+      "path": "/faq"
+    },
+    "blog": {
+      "title": "Marhaban Canada Blog — Tips for landing in Canada",
+      "description": "Practical guides and insights to prepare your move to Canada.",
+      "path": "/blog"
+    },
+    "testimonials": {
+      "title": "Marhaban Canada client testimonials",
+      "description": "Read success stories from families, students and workers we supported.",
+      "path": "/temoignages"
+    },
+    "about": {
+      "title": "About Marhaban Canada",
+      "description": "Our mission, values and the team welcoming you to Canada.",
+      "path": "/a-propos"
+    },
+    "contact": {
+      "title": "Contact Marhaban Canada",
+      "description": "Talk to an advisor and get a tailored settlement plan.",
+      "path": "/contact"
+    },
+    "notFound": {
+      "title": "Page not found — Marhaban Canada",
+      "description": "The page you requested does not exist or has moved.",
+      "path": "/404"
+    }
+  }
+}
