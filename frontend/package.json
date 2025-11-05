@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host --open=false",
     "build": "vite build && cp public/robots.txt dist/ && cp public/sitemap.xml dist/",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",

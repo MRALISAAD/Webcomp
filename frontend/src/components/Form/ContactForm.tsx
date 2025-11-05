@@ -18,11 +18,16 @@ import { Checkbox } from "../ui/checkbox";
 import { Label } from "../ui/label";
 import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 
-const packOptions = ["", "Basique", "Standard", "Premium"] as const;
+const packOptions = ["", "Essentiel", "Confort", "Premium"] as const;
 
 const formSchema = z.object({
   fullName: z.string().trim().min(2, "form.errors.fullName"),
   email: z.string().email("form.errors.email"),
+  phone: z
+    .string()
+    .trim()
+    .min(8, "form.errors.phone")
+    .max(20, "form.errors.phone"),
   country: z.string().optional().transform((value) => value?.trim() ?? ""),
   desiredPack: z.enum(packOptions),
   message: z.string().trim().min(20, "form.errors.message"),
@@ -42,6 +47,9 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
   const { submitLead, isLoading } = useZohoForm();
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
+  const fieldClass =
+    "!w-full !rounded-lg !border !border-gray-200 !bg-white !p-3 !text-[#0A2239] !shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:!border-[#1E3A5F] dark:!bg-[#0A2239] dark:!text-[#EAEAEA] dark:focus-visible:ring-offset-[#0A2239]";
+
   const {
     register,
     handleSubmit,
@@ -55,6 +63,7 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
     defaultValues: {
       fullName: "",
       email: "",
+      phone: "",
       country: "",
       desiredPack: defaultPack ?? "",
       message: "",
@@ -76,6 +85,7 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
         reset({
           fullName: "",
           email: "",
+          phone: "",
           country: "",
           desiredPack: defaultPack ?? "",
           message: "",
@@ -85,7 +95,7 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
         setStatus("error");
       }
     } catch (err) {
-      console.error(err);
+      // Error handled by status state
       setStatus("error");
     }
   });
@@ -98,18 +108,18 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
   return (
     <form
       onSubmit={onSubmit}
-      className="space-y-6"
+      className="space-y-6 rounded-2xl border border-[#D4AF37]/15 bg-white p-8 shadow-md transition-all duration-300 dark:bg-[#112A46]"
       noValidate
       aria-busy={isLoading}
     >
       {status === "success" && (
-        <Alert variant="default">
+        <Alert variant="default" role="status" aria-live="polite">
           <AlertTitle>{t("contact.form.successTitle")}</AlertTitle>
           <AlertDescription>{t("contact.form.success")}</AlertDescription>
         </Alert>
       )}
       {status === "error" && (
-        <Alert variant="destructive">
+        <Alert variant="destructive" role="alert" aria-live="assertive">
           <AlertTitle>{t("contact.form.errorTitle")}</AlertTitle>
           <AlertDescription>{t("contact.form.error")}</AlertDescription>
         </Alert>
@@ -125,6 +135,8 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
             {...register("fullName")}
             aria-invalid={!!errors.fullName}
             aria-required="true"
+            required
+            className={`${fieldClass}`}
           />
           {errors.fullName && (
             <p className="text-xs text-red-600">
@@ -143,10 +155,32 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
             {...register("email")}
             aria-invalid={!!errors.email}
             aria-required="true"
+            required
+            className={fieldClass}
           />
           {errors.email && (
             <p className="text-xs text-red-600">
               {t(errors.email.message || "form.errors.email")}
+            </p>
+          )}
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="phone">{t("contact.form.labels.phone")}</Label>
+          <Input
+            id="phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder={t("contact.form.placeholders.phone")}
+            {...register("phone")}
+            aria-invalid={!!errors.phone}
+            aria-required="true"
+            required
+            className={fieldClass}
+          />
+          {errors.phone && (
+            <p className="text-xs text-red-600">
+              {t(errors.phone.message || "form.errors.phone")}
             </p>
           )}
         </div>
@@ -158,6 +192,7 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
             placeholder={t("contact.form.placeholders.country")}
             {...register("country")}
             aria-invalid={!!errors.country}
+            className={fieldClass}
           />
         </div>
 
@@ -170,15 +205,12 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
             name="desiredPack"
             render={({ field }) => (
               <Select onValueChange={field.onChange} value={field.value}>
-                <SelectTrigger id="desiredPack">
+                <SelectTrigger id="desiredPack" className={fieldClass}>
                   <SelectValue
                     placeholder={t("contact.form.placeholders.desiredPack")}
                   />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">
-                    {t("contact.form.packPlaceholder")}
-                  </SelectItem>
+                <SelectContent className="rounded-xl border border-[#D4AF37]/20 bg-white/95 text-[#0A2239] shadow-lg dark:border-[#1E3A5F] dark:bg-[#0A2239] dark:text-[#EAEAEA]">
                   {packOptions
                     .filter((option) => option)
                     .map((option) => (
@@ -194,15 +226,17 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message">{t("contact.form.labels.message")}</Label>
-        <Textarea
-          id="message"
-          rows={5}
-          placeholder={t("contact.form.placeholders.message")}
-          {...register("message")}
-          aria-invalid={!!errors.message}
-          aria-required="true"
-        />
+          <Label htmlFor="message">{t("contact.form.labels.message")}</Label>
+          <Textarea
+            id="message"
+            rows={5}
+            placeholder={t("contact.form.placeholders.message")}
+            {...register("message")}
+            aria-invalid={!!errors.message}
+            aria-required="true"
+            required
+            className={`${fieldClass} !min-h-[160px]`}
+          />
         {errors.message && (
           <p className="text-xs text-red-600">
             {t(errors.message.message || "form.errors.message")}
@@ -226,14 +260,14 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
         />
         <label
           htmlFor="consent"
-          className="text-sm text-zinc-600 dark:text-zinc-300"
+          className="text-sm text-mutedLight dark:text-mutedDark"
         >
           {t("contact.form.consent")}
         </label>
       </div>
 
       {errors.consent && (
-        <p className="text-xs text-red-600">
+        <p className="text-xs text-red-600 dark:text-red-400">
           {t(errors.consent.message || "form.errors.consent")}
         </p>
       )}
@@ -241,7 +275,7 @@ const ContactForm = ({ defaultPack }: ContactFormProps) => {
       <Button
         type="submit"
         disabled={isLoading}
-        className="w-full rounded-2xl bg-primary px-6 py-3 text-base font-semibold text-white transition hover:bg-red-600 disabled:opacity-60 md:w-auto"
+        className="w-full rounded-full bg-[#D4AF37] px-6 py-3 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:bg-[#C39D2C] hover:shadow-lg disabled:opacity-60 md:w-auto"
       >
         {isLoading
           ? t("contact.form.submitLoading")

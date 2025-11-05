@@ -24,7 +24,7 @@ const BlogCard = ({ post }: BlogCardProps) => {
         <div className="text-xs uppercase tracking-wide text-primary">
           {t("blog.publishedOn", { date: localeDate.format("D MMMM YYYY") })}
         </div>
-        <h3 className="text-xl font-semibold text-ink dark:text-white">{post.title}</h3>
+        <h3 className="text-xl font-semibold text-ink dark:text-textLight">{post.title}</h3>
         <p className="flex-1 text-sm text-zinc-600 dark:text-zinc-300">{post.excerpt}</p>
         <Link to={`/blog/${post.slug}`} className="text-sm font-semibold text-primary hover:underline">
           {t("blog.readMore")}

@@ -35,8 +35,8 @@ const NotFound = () => {
       </Helmet>
 
       <p className="text-sm font-semibold uppercase tracking-wide text-primary">404</p>
-      <h1 className="text-4xl font-semibold text-ink dark:text-white">{seo.title}</h1>
-      <p className="text-base text-zinc-600 dark:text-zinc-300">{seo.description}</p>
+      <h1 className="text-4xl font-bold text-textMain dark:text-textLight">{seo.title}</h1>
+      <p className="text-base text-textSecondary dark:text-zinc-300">{seo.description}</p>
       <Button asChild>
         <Link to="/">{t("cta.discoverPacks")}</Link>
       </Button>

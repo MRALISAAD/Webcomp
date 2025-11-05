@@ -4,22 +4,22 @@ import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-beige disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-offset-navy",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow hover:bg-red-600",
+        default: "bg-gold text-white shadow-lg hover:opacity-90",
         outline:
-          "border border-zinc-200 bg-transparent text-ink hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100",
-        ghost: "bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-emerald-500/90",
-        link: "underline-offset-4 hover:underline text-primary"
+          "border border-gold/50 bg-transparent text-navy hover:bg-gold/10 hover:text-navy dark:border-gold/50 dark:text-textLight dark:hover:bg-gold/20",
+        ghost: "bg-transparent text-navy hover:bg-gold/10 dark:text-textLight dark:hover:bg-navyLight/70",
+        secondary: "bg-navy text-white shadow-lg hover:opacity-90 dark:bg-gold dark:text-navy",
+        link: "underline-offset-4 text-gold hover:text-gold/80"
       },
       size: {
-        default: "h-11 px-5 py-2.5",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-12 rounded-lg px-6 text-base",
-        icon: "h-10 w-10"
+        default: "h-11 px-6",
+        sm: "h-9 px-4 text-xs",
+        lg: "h-12 px-8 text-base",
+        icon: "h-10 w-10 rounded-full"
       }
     },
     defaultVariants: {

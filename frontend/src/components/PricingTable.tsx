@@ -12,7 +12,7 @@ const PricingTable = () => {
   return (
     <section className="space-y-6" id="packs">
       <div className="max-w-2xl space-y-3">
-        <h2 className="text-3xl font-semibold text-ink dark:text-white">{t("pricing.title")}</h2>
+        <h2 className="text-3xl font-semibold text-ink dark:text-textLight">{t("pricing.title")}</h2>
         <p className="text-lg text-zinc-600 dark:text-zinc-300">{t("pricing.subtitle")}</p>
       </div>
 
@@ -24,14 +24,14 @@ const PricingTable = () => {
             className="flex h-full flex-col rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
           >
             <div className="mb-4 flex items-center justify-between">
-              <h3 className="text-xl font-semibold text-ink dark:text-white">{pack.name}</h3>
+              <h3 className="text-xl font-semibold text-ink dark:text-textLight">{pack.name}</h3>
               {pack.badge && (
                 <Badge variant={pack.id === "premium" ? "secondary" : "default"}>
                   {pack.badge}
                 </Badge>
               )}
             </div>
-            <p className="text-3xl font-bold text-ink dark:text-white">{pack.price}</p>
+            <p className="text-3xl font-bold text-ink dark:text-textLight">{pack.price}</p>
             <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">{pack.description}</p>
             <Button asChild className="mt-6" variant={pack.id === "standard" ? "secondary" : "default"}>
               <Link to={{ pathname: "/contact" }} state={{ desiredPack: pack.name }}>
@@ -43,7 +43,7 @@ const PricingTable = () => {
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-xl font-semibold text-ink dark:text-white">{t("pricing.featuresLabel")}</h3>
+        <h3 className="text-xl font-semibold text-ink dark:text-textLight">{t("pricing.featuresLabel")}</h3>
         <Table>
           <TableHeader>
             <TableRow>

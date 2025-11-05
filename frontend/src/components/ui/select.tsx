@@ -14,7 +14,7 @@ const SelectTrigger = forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-11 w-full items-center justify-between rounded-lg border border-zinc-200 bg-white px-4 text-sm text-ink placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100",
+      "flex h-11 w-full items-center justify-between rounded-xl border border-gold/30 bg-white/90 px-4 text-sm text-navy placeholder:text-mutedLight shadow-sm transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-beige disabled:cursor-not-allowed disabled:opacity-50 dark:border-gold/30 dark:bg-navyLight/80 dark:text-textLight dark:focus-visible:ring-offset-navy",
       className
     )}
     {...props}
@@ -35,7 +35,7 @@ const SelectContent = forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        "relative z-50 min-w-[8rem] overflow-hidden rounded-xl border border-zinc-200 bg-white text-zinc-700 shadow-lg dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100",
+        "relative z-50 min-w-[8rem] overflow-hidden rounded-2xl border border-gold/30 bg-white/95 text-navy shadow-lg backdrop-blur dark:border-gold/30 dark:bg-navyLight/90 dark:text-textLight",
         position === "popper" && "translate-y-1",
         className
       )}
@@ -54,7 +54,7 @@ const SelectLabel = forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Label
     ref={ref}
-    className={cn("px-2 py-1.5 text-xs font-medium text-zinc-500", className)}
+    className={cn("px-2 py-1.5 text-xs font-semibold uppercase tracking-wide text-mutedLight dark:text-mutedDark", className)}
     {...props}
   />
 ));
@@ -67,7 +67,7 @@ const SelectItem = forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-pointer select-none items-center rounded-lg px-3 py-2 text-sm font-medium text-zinc-600 outline-none focus:bg-primary/10 focus:text-primary data-[state=checked]:text-primary dark:text-zinc-200 dark:focus:bg-primary/20 dark:focus:text-primary",
+      "relative flex w-full cursor-pointer select-none items-center rounded-lg px-3 py-2 text-sm font-medium text-navy outline-none transition-colors duration-200 hover:bg-gold/10 focus:bg-gold/15 focus:text-navy data-[state=checked]:text-gold dark:text-textLight dark:hover:bg-gold/15 dark:focus:bg-gold/20 dark:focus:text-textLight",
       className
     )}
     {...props}

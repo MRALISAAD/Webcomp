@@ -12,15 +12,18 @@ const Home = () => {
     path: string;
   };
 
-  const homeTitle = "Marhaban Canada — Accueil des nouveaux arrivants au Canada";
-  const homeDescription = seo.description;
+  const homeTitle =
+    seo.title ?? "Marhaban Canada — Simplifier l’arrivée, humaniser l’intégration";
+  const homeDescription =
+    seo.description ??
+    "Accompagnement humain et premium pour nouveaux arrivants au Canada : packs, démarches, logement, intégration.";
 
   const og = getOpenGraph({
     title: homeTitle,
     description: homeDescription,
     path: seo.path,
-    locale: i18n.language === "en" ? "en_CA" : "fr_CA",
-    image: marhabanImages.arrival
+    locale: i18n.language === "en" ? "en_CA" : i18n.language.startsWith("ar") ? "ar_AR" : "fr_CA",
+    image: marhabanImages.montreal
   });
 
   return (
@@ -28,6 +31,7 @@ const Home = () => {
       <Helmet htmlAttributes={{ lang: i18n.language }}>
         <title>{homeTitle}</title>
         <meta name="description" content={homeDescription} />
+        <meta name="theme-color" content="#0F3D56" />
         <link rel="canonical" href={buildCanonicalUrl(seo.path)} />
         <meta property="og:title" content={og.title} />
         <meta property="og:description" content={og.description} />
@@ -36,9 +40,11 @@ const Home = () => {
         {og.images?.[0] && <meta property="og:image" content={og.images[0].url} />}
         <meta property="og:site_name" content={og.siteName} />
         <meta property="og:locale" content={og.locale} />
+        <meta property="og:title" content="Marhaban Canada — Simplifier l’arrivée, humaniser l’intégration" />
+        <meta property="og:image" content="/images/skyline_montreal.webp" />
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(productsJsonLd)}</script>
-        <meta property="og:image:alt" content={homeTitle} />
+        <meta property="og:image:alt" content="Skyline de Montréal au coucher du soleil" />
       </Helmet>
 
       <HomeV2 />

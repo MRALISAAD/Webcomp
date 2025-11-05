@@ -6,6 +6,7 @@ import type { UtmValues } from "./useUTM";
 export interface LeadFormValues {
   fullName: string;
   email: string;
+  phone: string;
   country?: string;
   desiredPack: "" | "Basique" | "Standard" | "Premium";
   message: string;
@@ -15,6 +16,7 @@ export interface LeadFormValues {
 export interface LeadPayload extends Omit<LeadFormValues, "consent"> {
   utm: UtmValues | null;
   locale: "fr" | "en";
+  pack: string;
 }
 
 const readStoredUtm = (): UtmValues | null => {
@@ -47,17 +49,28 @@ export const useZohoForm = () => {
     async (values: LeadFormValues) => {
       setIsLoading(true);
       try {
+        const mapDesiredPackToSlug = (value: string): string => {
+          const normalized = value.trim().toLowerCase();
+          if (!normalized) return "essential";
+          if (["basique", "essentiel", "essential", "pack essentiel"].includes(normalized)) return "essential";
+          if (["standard", "confort", "comfort", "pack confort"].includes(normalized)) return "comfort";
+          return "premium";
+        };
+
         const payload: LeadPayload = {
           fullName: values.fullName.trim(),
           email: values.email.trim(),
+          phone: values.phone.trim(),
           country: values.country?.trim() ?? "",
           desiredPack: values.desiredPack,
           message: values.message.trim(),
           utm: readStoredUtm(),
           locale: i18n.language === "en" ? "en" : "fr",
+          pack: mapDesiredPackToSlug(values.desiredPack),
         };
 
-        const response = await api.post("/leads", payload);
+        const { desiredPack: _omit, ...apiPayload } = payload;
+        const response = await api.post("/leads", apiPayload);
         console.info("✅ Lead submitted to Zoho CRM", response.data);
         return { success: true };
       } catch (error) {

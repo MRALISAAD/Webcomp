@@ -12,7 +12,7 @@ const Hero = () => {
           <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-primary">
             Marhaban Canada
           </span>
-          <h1 className="text-3xl font-bold leading-tight tracking-tight text-ink dark:text-white sm:text-4xl lg:text-5xl">
+          <h1 className="text-3xl font-bold leading-tight tracking-tight text-ink dark:text-textLight sm:text-4xl lg:text-5xl">
             {t("hero.title")}
           </h1>
           <p className="max-w-xl text-lg text-zinc-700 dark:text-zinc-300">{t("hero.subtitle")}</p>

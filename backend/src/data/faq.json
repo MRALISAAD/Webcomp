@@ -1,0 +1,41 @@
+[
+  {
+    "id": "nas-delay",
+    "category": "administratif",
+    "order": 1,
+    "fr": {
+      "question": "Combien de temps prend l'obtention du NAS ?",
+      "answer": "Nous planifions votre rendez-vous avant votre arrivée. La plupart des clients reçoivent leur NAS le jour J ou sous 48h."
+    },
+    "en": {
+      "question": "How long does it take to get a SIN?",
+      "answer": "We pre-book your appointment so most clients receive their SIN on day zero or within 48 hours."
+    }
+  },
+  {
+    "id": "bank-account",
+    "category": "finance",
+    "order": 2,
+    "fr": {
+      "question": "Pouvez-vous ouvrir un compte bancaire avant mon arrivée ?",
+      "answer": "Nous préparons votre dossier et finalisons l'ouverture à votre arrivée avec un conseiller francophone."
+    },
+    "en": {
+      "question": "Can you open a bank account before I land?",
+      "answer": "We prepare your application and finalize the account with a French-speaking advisor when you land."
+    }
+  },
+  {
+    "id": "housing",
+    "category": "logement",
+    "order": 3,
+    "fr": {
+      "question": "Proposez-vous un logement temporaire ?",
+      "answer": "Les packs Confort et Premium incluent un logement meublé validé avant l'arrivée."
+    },
+    "en": {
+      "question": "Do you provide temporary housing?",
+      "answer": "Comfort and Premium bundles secure a furnished temporary housing solution before you land."
+    }
+  }
+]

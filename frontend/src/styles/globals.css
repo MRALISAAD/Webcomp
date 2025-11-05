@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: theme(colors.beige); --fg: theme(colors.grayText); }
+html.dark { --bg: theme(colors.gray.900); --fg: theme(colors.gray.100); }
+
+html { scroll-behavior: smooth; transition: background-color 0.3s ease, color 0.3s ease; }
+
+body { font-family: theme(fontFamily.sans); background: var(--bg); color: var(--fg); }
+
+.font-poppins { font-family: theme(fontFamily.display); }

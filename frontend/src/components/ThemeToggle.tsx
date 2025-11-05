@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -9,9 +9,7 @@ const ThemeToggle = () => {
   const [isDark, setIsDark] = useState<boolean>(() => {
     if (typeof window === "undefined") return false;
     const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      return stored === "dark";
-    }
+    if (stored) return stored === "dark";
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
@@ -29,11 +27,12 @@ const ThemeToggle = () => {
   return (
     <button
       type="button"
+      aria-label={isDark ? t("theme.light", "Mode clair") : t("theme.dark", "Mode sombre")}
+      aria-pressed={isDark}
       onClick={() => setIsDark((prev) => !prev)}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-200 bg-white text-zinc-600 transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800"
-      aria-label={isDark ? t("theme.light") : t("theme.dark")}
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-[#B23A48]/30 bg-white text-[#B23A48] shadow-sm transition duration-300 hover:scale-105 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B23A48] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F0E6] dark:border-[#B23A48]/40 dark:bg-[#002B5B] dark:text-[#F5F0E6] dark:hover:scale-105 dark:hover:shadow-lg dark:focus-visible:ring-offset-[#002B5B]"
     >
-      {isDark ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+      {isDark ? <Sun className="h-5 w-5" aria-hidden="true" /> : <Moon className="h-5 w-5" aria-hidden="true" />}
     </button>
   );
 };

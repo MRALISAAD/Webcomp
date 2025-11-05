@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168" height="48" viewBox="0 0 168 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="168" height="48" rx="12" fill="#0E0E0E"/>
+  <path d="M30 14L24 24L30 34" stroke="#F5F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 24H40" stroke="#F5F0EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 24L36 20" stroke="#C62828" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 24L36 28" stroke="#1B5E20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="30" fill="#F5F0EA" font-family="Poppins, Arial, sans-serif" font-size="18" font-weight="600">
+    Marhaban
+  </text>
+  <text x="56" y="42" fill="#C62828" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="500">
+    Canada
+  </text>
+</svg>

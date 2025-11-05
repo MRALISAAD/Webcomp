@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0F3D56;
+  --color-beige: #F5EAD8;
+  --color-gold: #D4A017;
+  --color-dark: #1E1E1E;
+  --color-white: #FFFFFF;
+  --font-title: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-quote: "Playfair Display", serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-beige);
+  color: var(--color-dark);
+}
+
+.dark body {
+  background-color: var(--color-primary);
+  color: var(--color-gold);
+}

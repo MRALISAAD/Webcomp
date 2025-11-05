@@ -1,9 +1,9 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import dayjs from "../lib/dayjs";
-import { blogPosts } from "../data/blogPosts";
+import { fetchBlogPost, type BlogPost as BlogPostType } from "../lib/api/blog";
 import { buildCanonicalUrl, getOpenGraph } from "../lib/seo";
 
 const parseContent = (content: string) => {
@@ -34,26 +34,44 @@ const slugify = (input: string) =>
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, i18n } = useTranslation();
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  const post = blogPosts.find((item) => item.slug === slug);
+  useEffect(() => {
+    let mounted = true;
+    if (!slug) return;
+    (async () => {
+      try {
+        const data = await fetchBlogPost(slug);
+        if (mounted) setPost(data);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, [slug]);
 
   const sections = useMemo(() => (post ? parseContent(post.content) : []), [post]);
 
-  if (!post) {
+  if (!loading && !post) {
     return <Navigate to="/blog" replace />;
   }
 
-  const seo = {
-    title: `${post.title} | ${t("siteName")}`,
-    description: post.excerpt,
-    path: `/blog/${post.slug}`
-  };
+  const seo = post
+    ? {
+        title: `${post.title} | ${t("siteName")}`,
+        description: post.excerpt,
+        path: `/blog/${post.slug}`,
+      }
+    : { title: t("blog.title"), description: t("blog.intro"), path: "/blog" };
 
   const og = getOpenGraph({
     title: seo.title,
     description: seo.description,
     path: seo.path,
-    image: post.coverImage,
+    image: post?.coverImage,
     locale: i18n.language === "en" ? "en_CA" : "fr_CA"
   });
 
@@ -74,7 +92,7 @@ const BlogPost = () => {
         <meta property="og:locale" content={og.locale} />
       </Helmet>
 
-      <nav aria-label="breadcrumb" className="text-sm text-zinc-500">
+      <nav aria-label="breadcrumb" className="text-sm text-textSecondary dark:text-zinc-400">
         <ol className="flex items-center gap-2">
           <li>
             <Link to="/" className="hover:text-primary">
@@ -88,13 +106,14 @@ const BlogPost = () => {
             </Link>
           </li>
           <li aria-hidden="true">/</li>
-          <li className="text-zinc-700 dark:text-zinc-300">{post.title}</li>
+          <li className="text-textSecondary dark:text-zinc-300">{post.title}</li>
         </ol>
       </nav>
 
+      {post && (
       <header className="space-y-4">
-        <h1 className="text-4xl font-semibold text-ink dark:text-white">{post.title}</h1>
-        <div className="flex flex-wrap items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400">
+        <h1 className="text-4xl font-bold text-textMain dark:text-textLight">{post.title}</h1>
+        <div className="flex flex-wrap items-center gap-3 text-sm text-textSecondary dark:text-zinc-400">
           <span>{t("blog.publishedOn", { date: localeDate.format("D MMMM YYYY") })}</span>
           <span>•</span>
           <span>{t("blog.minutesRead", { minutes: post.readingMinutes })}</span>
@@ -106,10 +125,11 @@ const BlogPost = () => {
           loading="lazy"
         />
       </header>
+      )}
 
       {sections.length > 0 && (
-        <aside className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+        <aside className="rounded-2xl border border-lightGray bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-textSecondary dark:text-zinc-400">
             {t("blog.toc", "Sommaire")}
           </h2>
           <ul className="mt-4 space-y-2 text-sm">
@@ -124,7 +144,8 @@ const BlogPost = () => {
         </aside>
       )}
 
-      <div className="prose prose-lg max-w-none dark:prose-invert">
+      {post && (
+      <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:text-textMain prose-p:text-textSecondary">
         {sections.map((section) => (
           <section key={section.heading} id={slugify(section.heading)}
             className="scroll-mt-24">
@@ -135,6 +156,7 @@ const BlogPost = () => {
           </section>
         ))}
       </div>
+      )}
 
       <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
         ← {t("blog.backToList")}

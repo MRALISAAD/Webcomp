@@ -1,0 +1,59 @@
+{
+  "info": {
+    "name": "Marhaban Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/status",
+          "host": ["{{base}}"],
+          "path": ["api", "status"]
+        }
+      }
+    },
+    {
+      "name": "Create Lead",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"Sara Benali\",\n  \"email\": \"sara@example.com\",\n  \"phone\": \"+15145551234\",\n  \"pack\": \"comfort\",\n  \"message\": \"J’arrive en novembre\",\n  \"locale\": \"fr\",\n  \"url\": \"https://marhabancanada.ca/packs\",\n  \"utm\": {\"source\": \"ads\", \"campaign\": \"fall\"},\n  \"source\": \"website\"\n}"
+        },
+        "url": {
+          "raw": "{{base}}/api/leads",
+          "host": ["{{base}}"],
+          "path": ["api", "leads"]
+        }
+      }
+    },
+    {
+      "name": "Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/metrics/basic",
+          "host": ["{{base}}"],
+          "path": ["api", "metrics", "basic"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base",
+          "value": "http://localhost:8080"
+    }
+  ]
+}

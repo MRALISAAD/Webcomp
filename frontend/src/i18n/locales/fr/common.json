@@ -74,8 +74,8 @@
     ]
   },
   "cta": {
-    "reserve": "Réserver mon pack",
-    "whatsapp": "Parler à un conseiller",
+    "reserve": "Réserver maintenant",
+    "whatsapp": "Parler sur WhatsApp",
     "discoverPacks": "Découvrir nos packs",
     "contactTeam": "Contacter notre équipe"
   },
@@ -84,9 +84,28 @@
     "badge": "Déjà plus de 300 arrivants accompagnés 🇨🇦"
   },
   "partners": {
-    "title": "Partenaires",
+    "title": "Ils nous font confiance",
     "heading": "Nos partenaires de confiance",
-    "subtitle": "Travaillez avec des leaders de l'industrie"
+    "subtitle": "Nous collaborons avec des acteurs fiables du logement, de la banque, des télécoms et de l’assurance.",
+    "alt": {
+      "handshake": "Poignée de main professionnelle",
+      "meeting": "Réunion d'équipe stratégique"
+    },
+    "form": {
+      "title": "Devenir partenaire",
+      "fields": {
+        "name": "Nom complet",
+        "company": "Entreprise",
+        "email": "Adresse courriel",
+        "message": "Message"
+      },
+      "submit": "Envoyer",
+      "sending": "Envoi...",
+      "successTitle": "Merci pour votre intérêt !",
+      "successDescription": "Notre équipe vous contactera sous 24 h.",
+      "close": "Fermer",
+      "error": "Impossible d'envoyer la demande. Merci de réessayer."
+    }
   },
   "process": {
     "title": "Comment ça marche",
@@ -172,66 +191,69 @@
   "home": {
     "hero": {
       "badge": "Pack Marhaban Canada",
-      "title": "Choisissez l’accompagnement idéal pour votre <strong>installation</strong>",
-      "subtitle": "Des solutions pensées pour les étudiants, familles et professionnels en partance de France, du Maroc ou de l’Algérie.",
+      "title": "Bienvenue au Canada — <strong>nous facilitons votre installation.</strong>",
+      "subtitle": "Que vous veniez étudier, travailler ou vous installer, nous vous accompagnons à chaque étape.",
       "cta": "Réserver maintenant",
-      "note": "Nous vous rappelons sous 24 h avec un plan personnalisé.",
-      "imageAlt": "Vue panoramique de Montréal au coucher du soleil",
+      "note": "Nous te rappelons sous 24 h avec un plan personnalisé.",
+      "imageAlt": "Skyline de Montréal au coucher du soleil",
       "points": [
-        "Accueil aéroport complet",
-        "Logement temporaire garanti",
-        "Démarches NAS • banque • téléphonie",
-        "Conseiller dédié 7j/7"
+        "Démarches NAS, banque et carte SIM réalisées rapidement",
+        "Recherche et sécurisation du logement temporaire",
+        "Suivi personnalisé avant, pendant et après votre arrivée",
+        "Assistance multicanale 7j/7 avec un conseiller dédié"
       ]
     },
     "packs": {
-      "title": "Des packs créés pour chaque projet",
-      "subtitle": "3 niveaux d’accompagnement pour préparer votre nouvelle vie au Canada.",
+      "title": "Packs Marhaban Canada",
+      "subtitle": "Des formules flexibles pour préparer votre installation en confiance.",
       "cards": [
         {
           "name": "Pack Essentiel",
-          "price": "299 $",
-          "description": "Préparez votre arrivée en toute sérénité avec les indispensables et un conseiller disponible avant votre départ."
+          "price": "299 $ CAD",
+          "description": "Préparez votre arrivée en toute confiance. Inclut : NAS, banque, carte SIM, accueil virtuel et suivi 7 jours.",
+          "cta": "Réserver Essentiel"
         },
         {
           "name": "Pack Confort",
-          "price": "599 $",
+          "price": "599 $ CAD",
           "badge": "Populaire",
-          "description": "Accueil à l’aéroport, logement temporaire garanti, démarches prioritaires et suivi pendant 30 jours."
+          "description": "Votre arrivée sans stress avec accueil aéroport, logement temporaire garanti et accompagnement complet des démarches pendant 30 jours.",
+          "cta": "Réserver Confort"
         },
         {
           "name": "Pack Premium",
-          "price": "1 099 $",
-          "description": "On s’occupe de tout pour votre famille : déménagement, logement sur mesure et accompagnement Illimité."
+          "price": "1 099 $ CAD",
+          "description": "Logement garanti avant votre départ, transport aéroport inclus et suivi illimité pour vous et votre famille.",
+          "cta": "Réserver Premium"
         }
       ],
-      "cta": "Découvrir tous les packs"
+      "cta": "Comparer les packs"
     },
     "comparison": {
       "title": "Comparer nos services",
-      "subtitle": "Chaque pack inclut les services essentiels, avec des options supplémentaires selon votre projet.",
+      "subtitle": "Chaque pack inclut les services essentiels, avec des options supplémentaires selon vos priorités.",
       "headers": ["Services", "Essentiel", "Confort", "Premium"],
       "rows": [
         { "service": "Préparation avant départ", "values": ["check", "check", "check"] },
         { "service": "Guide installation + support", "values": ["check", "check", "check"] },
         { "service": "Accueil aéroport", "values": ["dash", "check", "check"] },
         { "service": "Logement temporaire", "values": ["dash", "check", "check"] },
-        { "service": "Logement garanti avant arrivée", "values": ["dash", "dash", "check"] },
-        { "service": "Démarches NAS / banque / SIM", "values": ["check", "check", "check"] },
-        { "service": "Suivi post-arrivée", "values": ["7 j", "30 j", "3 mois"] },
+        { "service": "Logement garanti", "values": ["dash", "dash", "check"] },
+        { "service": "NAS / banque / SIM", "values": ["check", "check", "check"] },
+        { "service": "Suivi post arrivée", "values": ["7 j", "30 j", "3 mois"] },
         { "service": "Transport privé inclus", "values": ["dash", "dash", "check"] },
         { "service": "Agent dédié", "values": ["dash", "check", "check"] },
-        { "service": "Tarif", "values": ["299 $", "599 $", "1 099 $"] }
+        { "service": "Prix", "values": ["299 $", "599 $", "1 099 $"] }
       ]
     },
     "booking": {
       "title": "Prêt à réserver ton pack Marhaban ?",
-      "subtitle": "Nous te rappelons sous 24 h avec un plan d’accompagnement personnalisé.",
+      "subtitle": "Nous te rappelons sous 24h avec un plan d’accompagnement personnalisé. Tes informations sont confidentielles et ne seront jamais partagées.",
       "cta": "Réserver maintenant"
     },
     "advisor": {
       "title": "Besoin d’en discuter avec un conseiller ?",
-      "subtitle": "Notre équipe WhatsApp répond 7j/7 depuis Montréal.",
+      "subtitle": "Notre équipe WhatsApp répond 7j/7.",
       "cta": "Parler sur WhatsApp",
       "badge": "Réponse en moins de 2 heures"
     },
@@ -239,19 +261,38 @@
       "arrival": "Étudiant arrivant à l'aéroport",
       "family": "Famille accueillie à Montréal",
       "montreal": "Skyline de Montréal au coucher du soleil"
+    },
+    "family": {
+      "title": "Un accompagnement humain, disponible 7j/7",
+      "subtitle": "Vos conseillers Marhaban restent joignables en tout temps pour répondre à vos questions et ajuster votre plan d'installation."
     }
+  },
+  "bookingPopup": {
+    "title": "Réserver le Pack {{pack}}",
+    "subtitle": "Complétez le formulaire, nous vous répondons sous 24 h.",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Adresse courriel",
+      "phone": "Téléphone (WhatsApp)",
+      "pack": "Pack choisi"
+    },
+    "packs": {
+      "essential": "Pack Essentiel",
+      "comfort": "Pack Confort",
+      "premium": "Pack Premium"
+    },
+    "submit": "Envoyer ma demande",
+    "sending": "Envoi...",
+    "successTitle": "Merci ! Votre demande a été envoyée.",
+    "successDescription": "Notre équipe vous contactera sous 24 h.",
+    "close": "Fermer",
+    "error": "Impossible d'envoyer la demande. Merci de réessayer."
   },
   "packs": {
     "alt": {
       "essentiel": "Passeport tenu en main",
       "confort": "Appartement moderne et lumineux",
       "premium": "Famille avec valises"
-    }
-  },
-  "partners": {
-    "alt": {
-      "handshake": "Poignée de main professionnelle",
-      "meeting": "Réunion d'équipe stratégique"
     }
   },
   "contact": {
@@ -267,47 +308,47 @@
   },
   "homeProcess": {
     "title": "Comment ça marche ?",
-    "subtitle": "Nous avons simplifié le processus pour que votre installation soit fluide et agréable.",
+    "subtitle": "Un accompagnement humain et structuré pour réussir votre installation.",
     "steps": [
       {
-        "title": "Avant votre arrivée",
-        "description": "Préparation de vos documents et réservations"
+        "title": "Avant votre départ",
+        "description": "Préparation complète, checklist personnalisée et conseils pratiques."
       },
       {
-        "title": "Arrivée à l'aéroport",
-        "description": "Accueil personnalisé"
+        "title": "Accueil à l’aéroport",
+        "description": "Prise en charge rapide et transfert vers votre logement."
       },
       {
-        "title": "Installation",
-        "description": "Aide pour NAS, banque, logement"
+        "title": "Installation logement",
+        "description": "Recherche, validation et accompagnement budgétaire."
       },
       {
-        "title": "Intégration",
-        "description": "Conseils pratiques"
+        "title": "Démarches",
+        "description": "NAS, banque, carte SIM, assurance : planification et suivi."
       },
       {
         "title": "Suivi",
-        "description": "Contact continu via WhatsApp et email"
+        "description": "Assistance continue et ressources officielles pour avancer sereinement."
       }
     ]
   },
   "homeTestimonials": {
-    "subtitle": "Découvrez les témoignages de nos clients heureux d'avoir choisi Marhaban Canada.",
+    "subtitle": "Ils nous ont fait confiance pour préparer leur nouvelle vie au Canada.",
     "items": [
       {
-        "text": "Service professionnel et humain. Je recommande à tous les nouveaux arrivants.",
-        "author": "Samira",
-        "role": "étudiante à l'UQAM"
+        "text": "Grâce à Marhaban, j’ai trouvé un logement en deux jours !",
+        "author": "Ahmed",
+        "role": "Étudiant"
       },
       {
-        "text": "Grâce à eux, j'ai trouvé un logement et obtenu mon NAS en 3 jours.",
-        "author": "Youssef",
-        "role": "travailleur à Québec"
+        "text": "Service impeccable et humain.",
+        "author": "Sarah",
+        "role": "Travailleuse temporaire"
       },
       {
-        "text": "Très bon accompagnement, on se sent en confiance dès le premier contact.",
-        "author": "Nadia",
-        "role": "famille à Longueuil"
+        "text": "Un accompagnement complet du départ à l’arrivée, je ne me suis jamais sentie seule.",
+        "author": "Leïla",
+        "role": "Nouvelle résidente permanente"
       }
     ]
   },
@@ -328,8 +369,8 @@
     "cta": "Lire les ressources"
   },
   "homeLeadForm": {
-    "title": "Réserver un accompagnement",
-    "subtitle": "Dites-nous vos besoins et nous vous recontactons sous 24h."
+    "title": "Besoin d’en discuter avec un conseiller ?",
+    "subtitle": "Notre équipe WhatsApp répond 7j/7."
   },
   "homeTech": {
     "title": "Notre technologie au service de votre installation",
@@ -369,54 +410,30 @@
     ]
   },
   "ctaFinal": {
-    "title": "Votre arrivée au Canada, sans stress.",
-    "subtitle": "Commencez votre nouveau voyage aujourd'hui",
-    "primary": "Réserver mon pack",
-    "secondary": "Parler à un conseiller"
+    "title": "Prêt à commencer votre aventure au Canada ?",
+    "subtitle": "Réservez votre accompagnement et bénéficiez d’un plan personnalisé sous 24 h.",
+    "primary": "Réserver maintenant",
+    "secondary": "Parler sur WhatsApp"
   },
-  "faq": {
-    "title": "FAQ",
+"faq": {
+    "title": "Questions fréquentes",
     "intro": "Les réponses aux questions les plus fréquentes.",
     "items": [
       {
-        "question": "Combien de temps à l’avance dois-je réserver ?",
-        "answer": "Idéalement 4 à 6 semaines avant votre arrivée pour garantir les meilleures disponibilités."
-      },
-      {
-        "question": "Couvrez-vous toutes les provinces ?",
-        "answer": "Québec, Ontario, Colombie-Britannique et provinces atlantiques. Contactez-nous pour les autres régions."
-      },
-      {
-        "question": "Vos services sont-ils adaptés aux étudiants ?",
-        "answer": "Oui, nous avons des offres dédiées et un accompagnement pour les démarches universitaires."
-      },
-      {
-        "question": "Y a-t-il un suivi après l’installation ?",
-        "answer": "Le pack Premium inclut 30 jours de suivi, prolongeable selon vos besoins."
+        "question": "Aidez-vous à trouver un logement ?",
+        "answer": "Oui, les packs Confort et Premium incluent un accompagnement logement ainsi qu’une solution temporaire garantie."
       },
       {
         "question": "Aidez-vous pour les démarches administratives ?",
-        "answer": "Oui : NAS, banque, RAMQ, téléphone, assurances et plus encore selon le pack choisi."
+        "answer": "Oui, tous nos packs incluent l’accompagnement NAS, banque, carte SIM et assurance."
       },
       {
-        "question": "Êtes-vous multilingues ?",
-        "answer": "FR / EN / AR. Nous adaptons notre accompagnement à votre langue."
+        "question": "Le suivi est-il inclus ?",
+        "answer": "Oui : 7 jours pour le pack Essentiel, 30 jours pour le pack Confort et suivi illimité pour le pack Premium."
       },
       {
-        "question": "Que se passe-t-il si mon visa est retardé ?",
-        "answer": "Nous replanifions sans frais d’agence; seuls les frais tiers déjà engagés restent dus."
-      },
-      {
-        "question": "Pouvez-vous garantir un logement ?",
-        "answer": "Réservation confirmée en Standard et Premium selon votre dossier et le marché."
-      },
-      {
-        "question": "Travaillez-vous avec des partenaires ?",
-        "answer": "Banques, opérateurs, établissements — transparence totale sur nos affiliations."
-      },
-      {
-        "question": "Mes données sont-elles protégées ?",
-        "answer": "Oui, nous respectons la confidentialité. Consultez notre Politique de confidentialité."
+        "question": "Proposez-vous l’accueil à l’aéroport ?",
+        "answer": "Oui, l’accueil à l’aéroport est inclus dès le pack Confort et renforcé dans le pack Premium."
       }
     ]
   },
@@ -435,23 +452,27 @@
     }
   },
   "about": {
-    "title": "Notre mission",
-    "mission": "Faciliter l’installation des nouveaux arrivants francophones au Canada avec un accompagnement humain, multilingue et personnalisé.",
-    "visionTitle": "Notre vision",
-    "vision": "Devenir la référence au Canada en matière d’accompagnement à l’installation, en combinant technologie, réseau local et bienveillance pour une expérience simple et rassurante.",
+    "title": "À propos de Marhaban Canada",
+    "mission": "Offrir une solution claire, humaine et efficace pour simplifier l’installation au Canada.",
+    "visionTitle": "Notre engagement",
+    "vision": "Créer un parcours rassurant et structuré, de la préparation à l’intégration, pour chaque personne qui choisit le Canada.",
     "valuesTitle": "Nos valeurs",
     "values": [
       {
         "title": "Bienveillance",
-        "description": "Chaque parcours est unique : nous adaptons nos services à votre réalité."
+        "description": "Chaque parcours est unique : nous écoutons, adaptons nos recommandations et restons disponibles."
       },
       {
         "title": "Fiabilité",
-        "description": "Des partenaires vérifiés et des processus documentés à chaque étape."
+        "description": "Des partenaires vérifiés, une méthodologie éprouvée et des suivis réguliers."
       },
       {
-        "title": "Transparence",
-        "description": "Un budget clair, des délais communiqués, des engagements tenus."
+        "title": "Clarté",
+        "description": "Une information transparente, des étapes détaillées et aucun frais caché."
+      },
+      {
+        "title": "Efficacité",
+        "description": "Des démarches planifiées, des délais optimisés et un véritable gain de temps à l’arrivée."
       }
     ],
     "teamTitle": "Rencontrez l’équipe",
@@ -474,8 +495,8 @@
       }
     ],
     "partnersCta": {
-      "title": "Rejoindre nos partenaires",
-      "subtitle": "Vous souhaitez collaborer avec Marhaban Canada et accompagner nos clients ?",
+      "title": "Devenir partenaire",
+      "subtitle": "Vous souhaitez proposer vos services aux nouveaux arrivants ? Contactez-nous et construisons une collaboration durable.",
       "primary": "Devenir partenaire",
       "secondary": "Nous contacter"
     }
@@ -490,9 +511,9 @@
         "Canal WhatsApp prioritaire"
       ]
     },
-    "title": "Contact",
-    "subtitle": "Vous avez une question ou un projet ? Écrivez-nous — nous répondons sous 24h (jours ouvrables).",
-    "intro": "Une question ? Notre équipe vous répond rapidement. Écrivez-nous ou passez par WhatsApp.",
+    "title": "Contactez-nous",
+    "subtitle": "Notre équipe est disponible pour répondre à vos questions et préparer votre arrivée.",
+    "intro": "Envoyez-nous un message ou échangez via WhatsApp : nous vous accompagnons à chaque étape.",
     "formTitle": "Parlez-nous de votre arrivée",
     "formSubtitle": "Complétez le formulaire et nous vous rappelons sous 24h (jours ouvrables).",
     "whatsappMessage": "Bonjour Marhaban Canada, je souhaite parler avec un conseiller.",
@@ -531,7 +552,7 @@
       "submit": "Envoyer ma demande",
       "submitLoading": "Envoi en cours…",
       "successTitle": "Demande envoyée",
-      "success": "Merci ! Un membre de l’équipe vous contactera sous 24h.",
+      "success": "Merci ! Nous vous répondrons sous 24 h.",
       "errorTitle": "Envoi impossible",
       "error": "Impossible d’envoyer, réessayez."
     },
@@ -540,7 +561,7 @@
       "hoursDescription": "Lundi au vendredi — 9h à 18h (heure de Montréal).",
       "note": "Notre équipe multilingue (FR/EN/AR) vous accompagne à chaque étape. Vous n’êtes pas seul.",
       "gdpr": "Vos données restent confidentielles et utilisées uniquement pour vous recontacter.",
-      "testimonial": "“Grâce à Marhaban Canada, mon arrivée à Montréal a été beaucoup plus simple.” — A., France",
+      "testimonial": "“Grâce à Marhaban Canada, mon arrivée à Montréal a été beaucoup plus simple.” — A.",
       "privacyLink": "Voir notre Politique de confidentialité"
     }
   },
@@ -589,8 +610,8 @@
   },
   "seo": {
     "home": {
-      "title": "Marhaban Canada — Packs d’installation pour nouveaux arrivants",
-      "description": "Accueil aéroport, démarches administratives, logement et suivi humain pour votre arrivée au Canada.",
+      "title": "Accueil Marhaban Canada – Installation au Canada",
+      "description": "Accueil aéroport, logement, démarches NAS et suivi personnalisé : Marhaban Canada accompagne votre arrivée pour une installation sereine.",
       "path": "/"
     },
     "packs": {
@@ -664,9 +685,9 @@
   "packsPage": {
     "intro": {
       "eyebrow": "Packs Marhaban Canada",
-      "title": "Choisissez l’accompagnement idéal pour votre installation",
-      "highlight": "installation",
-      "subtitle": "Des solutions pensées pour les étudiants, familles et travailleurs du Maroc et d’Algérie.",
+      "title": "Des formules flexibles adaptées à vos besoins",
+      "highlight": "flexibles",
+      "subtitle": "Chaque projet d’installation est unique. Choisissez le niveau d’accompagnement adapté à vos priorités.",
       "cta": "Réserver maintenant"
     },
     "packages": {
@@ -675,9 +696,9 @@
         "price": "299 $ CAD",
         "badge": "",
         "description": [
-          "Prépare ton arrivée en toute sérénité.",
-          "Tu pars au Canada pour la première fois ? On t’aide à tout planifier avant même ton vol : documents, démarches et premiers repères sur place.",
-          "Deviens autonome et évite les erreurs grâce à notre accompagnement à distance et notre guide complet."
+          "Préparez votre arrivée en toute confiance.",
+          "Inclut : NAS, banque, carte SIM, accueil virtuel et suivi 7 jours.",
+          "Idéal pour démarrer sereinement et rester autonome dès vos premiers jours."
         ],
         "cta": "Réserver Essentiel"
       },
@@ -686,9 +707,9 @@
         "price": "599 $ CAD",
         "badge": "Populaire",
         "description": [
-          "Ton arrivée sans stress, avec un vrai accompagnement humain.",
-          "On t’accueille, on t’aide à trouver ton logement temporaire et on t’accompagne dans toutes tes démarches.",
-          "Tu n’es jamais seul : ton agent Marhaban Canada reste à ton écoute pendant 30 jours."
+          "Votre arrivée sans stress avec un véritable accompagnement humain.",
+          "Accueil à l’aéroport, logement temporaire garanti et démarches administratives complètes.",
+          "Un conseiller dédié reste à vos côtés pendant 30 jours."
         ],
         "cta": "Réserver Confort"
       },
@@ -697,9 +718,9 @@
         "price": "1 099 $ CAD",
         "badge": "",
         "description": [
-          "On s’occupe de tout, pour toi et ta famille.",
-          "Avant ton départ, on te trouve un logement sûr, on organise ton transport, et on reste à tes côtés pendant trois mois complets.",
-          "Tu profites de ton arrivée, on gère le reste."
+          "On s’occupe de tout pour vous et votre famille.",
+          "Logement garanti avant votre arrivée et transport aéroport privé inclus.",
+          "Suivi illimité, ressources officielles et accompagnement personnalisé."
         ],
         "cta": "Réserver Premium"
       }
@@ -717,8 +738,8 @@
         { "service": "Guide installation + support", "essential": "check", "comfort": "check", "premium": "check" },
         { "service": "Accueil aéroport", "essential": "dash", "comfort": "check", "premium": "check" },
         { "service": "Logement temporaire", "essential": "dash", "comfort": "check", "premium": "check" },
-        { "service": "Logement garanti avant arrivée", "essential": "dash", "comfort": "dash", "premium": "check" },
-        { "service": "Démarches NAS / banque / SIM", "essential": "partial", "comfort": "check", "premium": "check" },
+        { "service": "Logement garanti", "essential": "dash", "comfort": "dash", "premium": "check" },
+        { "service": "Démarches NAS / banque / SIM / assurance", "essential": "check", "comfort": "check", "premium": "check" },
         { "service": "Suivi post-arrivée", "essential": "7 j", "comfort": "30 j", "premium": "3 mois" },
         { "service": "Transport privé inclus", "essential": "no", "comfort": "no", "premium": "check" },
         { "service": "Agent dédié", "essential": "no", "comfort": "check", "premium": "check" },
@@ -727,7 +748,7 @@
     },
     "cta": {
       "title": "Prêt à réserver ton pack Marhaban ?",
-      "subtitle": "Nous te rappelons sous 24h avec un plan d’accompagnement personnalisé.",
+      "subtitle": "Nous te rappelons sous 24 h avec un plan d’accompagnement personnalisé.",
       "button": "Réserver maintenant"
     },
     "modal": {
@@ -751,7 +772,7 @@
     },
     "contact": {
       "title": "Besoin d’en discuter avec un conseiller ?",
-      "subtitle": "Notre équipe WhatsApp répond 7j/7 depuis Montréal.",
+      "subtitle": "Notre équipe WhatsApp répond 7j/7.",
       "button": "Parler sur WhatsApp",
       "note": "Réponse en moins de 2 heures",
       "whatsappUrl": "https://wa.me/15146910262?text=Bonjour%20Marhaban%20Canada%2C%20j%E2%80%99aimerais%20en%20savoir%20plus%20sur%20vos%20packs."

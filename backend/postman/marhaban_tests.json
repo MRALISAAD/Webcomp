@@ -1,0 +1,269 @@
+{
+  "info": {
+    "name": "Marhaban Canada — API Regression",
+    "_postman_id": "6e5a6b5f-6e9d-4c9f-8e4f-29a1c5b2a4f9",
+    "description": "Collection Postman pour valider les routes critiques (status, leads, contact, FAQ, metrics) et garantir l'intégration Zoho CRM + Zoho Mail.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "baseProtocol",
+      "value": "http",
+      "type": "string"
+    },
+    {
+      "key": "baseHost",
+      "value": "localhost",
+      "type": "string"
+    },
+    {
+      "key": "basePort",
+      "value": "8080",
+      "type": "string"
+    },
+    {
+      "key": "adminUser",
+      "value": "marhaban",
+      "type": "string"
+    },
+    {
+      "key": "adminPass",
+      "value": "securepassword",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "1️⃣ Healthcheck — GET /api/status",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Payload contient version & uptime', function () {",
+              "  const body = pm.response.json();",
+              "  pm.expect(body).to.have.property('status', 'ok');",
+              "  pm.expect(body).to.have.property('uptime');",
+              "  pm.expect(body).to.have.property('version');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseProtocol}}://{{baseHost}}:{{basePort}}/api/status",
+          "protocol": "{{baseProtocol}}",
+          "host": ["{{baseHost}}"],
+          "port": "{{basePort}}",
+          "path": ["api", "status"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2️⃣ Lead complet — POST /api/leads",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Lead créé', function () { pm.response.to.have.status(201); });",
+              "const json = pm.response.json();",
+              "pm.test('Réponse success=true', function () { pm.expect(json.success).to.eql(true); });",
+              "pm.test('IDs retournés', function () { pm.expect(json).to.have.property('leadId'); });",
+              "pm.globals.set('lastLeadId', json.leadId || '');",
+              "pm.globals.set('lastZohoId', json.zohoId || '');"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"Samira Lahlou\",\n  \"email\": \"samira.qa+lead@marhabancanada.ca\",\n  \"phone\": \"+15145550123\",\n  \"pack\": \"Premium\",\n  \"message\": \"Arrivée prévue fin novembre, besoin logement temporaire.\",\n  \"locale\": \"fr\",\n  \"source\": \"Postman QA\",\n  \"arrivalDate\": \"2024-11-28\",\n  \"city\": \"Montréal\",\n  \"country\": \"Canada\"\n}"
+        },
+        "url": {
+          "raw": "{{baseProtocol}}://{{baseHost}}:{{basePort}}/api/leads",
+          "protocol": "{{baseProtocol}}",
+          "host": ["{{baseHost}}"],
+          "port": "{{basePort}}",
+          "path": ["api", "leads"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3️⃣ Lead invalide — POST /api/leads (422)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Erreur de validation', function () { pm.response.to.have.status(422); });",
+              "const json = pm.response.json();",
+              "pm.test('Contient détails', function () { pm.expect(json).to.have.property('error'); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"Validation Manquante\",\n  \"pack\": \"Essentiel\"\n}"
+        },
+        "url": {
+          "raw": "{{baseProtocol}}://{{baseHost}}:{{basePort}}/api/leads",
+          "protocol": "{{baseProtocol}}",
+          "host": ["{{baseHost}}"],
+          "port": "{{basePort}}",
+          "path": ["api", "leads"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4️⃣ Contact form — POST /api/contact",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Contact OK', function () { pm.response.to.have.status(201); });",
+              "const json = pm.response.json();",
+              "pm.test('Success true', function () { pm.expect(json.success).to.eql(true); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"Nora QA\",\n  \"email\": \"nora.qa+contact@marhabancanada.ca\",\n  \"phone\": \"+15145559876\",\n  \"subject\": \"Pack Confort ?\",\n  \"message\": \"Bonjour, je veux confirmer le prix et la dispo.\",\n  \"preferredLanguage\": \"fr\",\n  \"pack\": \"comfort\"\n}"
+        },
+        "url": {
+          "raw": "{{baseProtocol}}://{{baseHost}}:{{basePort}}/api/contact",
+          "protocol": "{{baseProtocol}}",
+          "host": ["{{baseHost}}"],
+          "port": "{{basePort}}",
+          "path": ["api", "contact"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5️⃣ FAQ cache/fallback — GET /api/faq",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('FAQ 200', function () { pm.response.to.have.status(200); });",
+              "const json = pm.response.json();",
+              "pm.test('Liste non vide', function () { pm.expect(json).to.be.an('array'); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseProtocol}}://{{baseHost}}:{{basePort}}/api/faq",
+          "protocol": "{{baseProtocol}}",
+          "host": ["{{baseHost}}"],
+          "port": "{{basePort}}",
+          "path": ["api", "faq"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6️⃣ Metrics admin — GET /api/admin/metrics",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Metrics OK', function () { pm.response.to.have.status(200); });",
+              "const json = pm.response.json();",
+              "pm.test('Structure métriques', function () { pm.expect(json).to.have.property('requestsTotal'); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic {{adminAuth}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseProtocol}}://{{baseHost}}:{{basePort}}/api/admin/metrics",
+          "protocol": "{{baseProtocol}}",
+          "host": ["{{baseHost}}"],
+          "port": "{{basePort}}",
+          "path": ["api", "admin", "metrics"]
+        }
+      },
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "exec": [
+          "const current = pm.collectionVariables.get('adminAuth');",
+          "if (!current) {",
+          "  const user = pm.collectionVariables.get('adminUser') || pm.variables.get('adminUser') || 'marhaban';",
+          "  const pass = pm.collectionVariables.get('adminPass') || pm.variables.get('adminPass') || 'securepassword';",
+          "  const encoded = btoa(`${user}:${pass}`);",
+          "  pm.collectionVariables.set('adminAuth', encoded);",
+          "}"
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ]
+}

@@ -7,7 +7,7 @@ const Steps = () => {
 
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl font-semibold text-ink dark:text-white">{t("steps.title")}</h2>
+      <h2 className="text-2xl font-semibold text-ink dark:text-textLight">{t("steps.title")}</h2>
       <div className="grid gap-4 md:grid-cols-4">
         {steps.map((step, index) => (
           <Card key={step} className="h-full space-y-3 border-none bg-zinc-50/80 p-6 dark:bg-zinc-900/80">

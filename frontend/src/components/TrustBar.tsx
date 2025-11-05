@@ -10,8 +10,8 @@ const TrustBar = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="mt-10 rounded-3xl border border-zinc-200 bg-white/70 p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/70">
-      <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-500">
+    <section className="mt-10 rounded-3xl border border-gold/20 bg-white/90 p-6 shadow-sm transition-colors duration-300 dark:border-gold/20 dark:bg-navyLight/80">
+      <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-mutedLight dark:text-mutedDark">
         {t("trust.title")}
       </p>
       <div className="flex flex-wrap items-center justify-center gap-8">

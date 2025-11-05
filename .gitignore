@@ -1,39 +1,26 @@
-# Environment files
-.env
-.env.local
-.env.*.local
-backend/.env
-frontend/.env
-admin/.env
+# Ignore MongoDB data
+mongo_data/
 
-# Node artifacts
+# Node / builds
 node_modules/
-**/node_modules/
-
-# Build outputs
 dist/
 build/
-coverage/
-.nyc_output/
-frontend/dist/
-admin/dist/
-!cleanup/removed/ci/**
-!cleanup/removed/frontend/**
-!cleanup/duplicates/**
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Environment & logs
+.env
+.env.local
+.env.production
+*.log
 
-# Cache directories
-.cache/
-parcel-cache/
-.expo/
-
-# Misc
-.DS_Store
-Thumbs.db
+# IDE / système
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
+mongo_data/
+node_modules/
+dist/
+.env
+.vscode/
+.idea/
+*.log

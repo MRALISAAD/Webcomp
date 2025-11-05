@@ -6,7 +6,7 @@ const Accordion = AccordionPrimitive.Root;
 
 const AccordionItem = ({ className, ...props }: AccordionPrimitive.AccordionItemProps) => (
   <AccordionPrimitive.Item
-    className={cn("overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800", className)}
+    className={cn("overflow-hidden rounded-2xl border border-gold/20 dark:border-gold/20", className)}
     {...props}
   />
 );
@@ -17,7 +17,7 @@ const AccordionTrigger = ({ className, children, ...props }: AccordionPrimitive.
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       className={cn(
-        "flex flex-1 items-center justify-between gap-4 bg-white px-5 py-4 text-left text-base font-semibold text-ink transition hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:bg-zinc-900 dark:text-zinc-100",
+        "flex flex-1 items-center justify-between gap-4 bg-white px-5 py-4 text-left text-base font-semibold text-textDark transition hover:bg-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:bg-navyLight dark:text-textLight",
         className
       )}
       {...props}
@@ -33,7 +33,7 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 const AccordionContent = ({ className, children, ...props }: AccordionPrimitive.AccordionContentProps) => (
   <AccordionPrimitive.Content
     className={cn(
-      "bg-white px-5 pb-5 text-sm leading-relaxed text-zinc-600 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down dark:bg-zinc-900 dark:text-zinc-300",
+      "bg-white px-5 pb-5 text-sm leading-relaxed text-mutedLight data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down dark:bg-navyLight dark:text-mutedDark",
       className
     )}
     {...props}

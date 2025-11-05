@@ -19,7 +19,7 @@ const TestimonialCard = ({ quote, author, role, city, image }: TestimonialCardPr
           className="h-14 w-14 rounded-full object-cover"
         />
         <div>
-          <p className="text-base font-semibold text-ink dark:text-white">{author}</p>
+          <p className="text-base font-semibold text-ink dark:text-textLight">{author}</p>
           <p className="text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
             {role} • {city}
           </p>

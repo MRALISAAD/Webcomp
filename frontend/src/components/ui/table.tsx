@@ -1,44 +1,64 @@
-import { cn } from "../../lib/utils";
+import * as React from "react";
 
-const Table = ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-  <div className="relative w-full overflow-x-auto">
-    <table
-      className={cn(
-        "w-full border-collapse rounded-2xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-700 dark:bg-zinc-900",
-        className
-      )}
+const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
+  ({ className, ...props }, ref) => (
+    <div className="relative w-full overflow-auto">
+      <table ref={ref} className={`w-full caption-bottom text-sm ${className || ""}`} {...props} />
+    </div>
+  )
+);
+Table.displayName = "Table";
+
+const TableHeader = React.forwardRef<
+  HTMLTableSectionElement,
+  React.HTMLAttributes<HTMLTableSectionElement>
+>(({ className, ...props }, ref) => (
+  <thead ref={ref} className={`[&_tr]:border-b ${className || ""}`} {...props} />
+));
+TableHeader.displayName = "TableHeader";
+
+const TableBody = React.forwardRef<
+  HTMLTableSectionElement,
+  React.HTMLAttributes<HTMLTableSectionElement>
+>(({ className, ...props }, ref) => (
+  <tbody ref={ref} className={`[&_tr:last-child]:border-0 ${className || ""}`} {...props} />
+));
+TableBody.displayName = "TableBody";
+
+const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTMLTableRowElement>>(
+  ({ className, ...props }, ref) => (
+    <tr
+      ref={ref}
+      className={`border-b transition-colors hover:bg-zinc-100/50 data-[state=selected]:bg-zinc-100 dark:hover:bg-zinc-800/50 dark:data-[state=selected]:bg-zinc-800 ${className || ""}`}
       {...props}
     />
-  </div>
+  )
 );
+TableRow.displayName = "TableRow";
 
-const TableHeader = ({ className, ...props }: React.HTMLAttributes<HTMLTableSectionElement>) => (
-  <thead className={cn("bg-zinc-50/80 dark:bg-zinc-800/50", className)} {...props} />
-);
-
-const TableBody = ({ className, ...props }: React.HTMLAttributes<HTMLTableSectionElement>) => (
-  <tbody className={cn("", className)} {...props} />
-);
-
-const TableRow = ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
-  <tr
-    className={cn(
-      "border-b border-zinc-100 last:border-none hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:bg-zinc-800/50",
-      className
-    )}
-    {...props}
-  />
-);
-
-const TableHead = ({ className, ...props }: React.ThHTMLAttributes<HTMLTableCellElement>) => (
+const TableHead = React.forwardRef<
+  HTMLTableCellElement,
+  React.ThHTMLAttributes<HTMLTableCellElement>
+>(({ className, ...props }, ref) => (
   <th
-    className={cn("px-4 py-3 text-left text-sm font-semibold text-zinc-700 dark:text-zinc-200", className)}
+    ref={ref}
+    className={`h-12 px-4 text-left align-middle font-semibold text-zinc-600 [&:has([role=checkbox])]:pr-0 dark:text-zinc-400 ${className || ""}`}
     {...props}
   />
-);
+));
+TableHead.displayName = "TableHead";
 
-const TableCell = ({ className, ...props }: React.TdHTMLAttributes<HTMLTableCellElement>) => (
-  <td className={cn("px-4 py-3 text-sm text-zinc-600 dark:text-zinc-300", className)} {...props} />
-);
+const TableCell = React.forwardRef<
+  HTMLTableCellElement,
+  React.TdHTMLAttributes<HTMLTableCellElement>
+>(({ className, ...props }, ref) => (
+  <td
+    ref={ref}
+    className={`p-4 align-middle [&:has([role=checkbox])]:pr-0 ${className || ""}`}
+    {...props}
+  />
+));
+TableCell.displayName = "TableCell";
 
-export { Table, TableHeader, TableBody, TableRow, TableHead, TableCell };
+export { Table, TableHeader, TableBody, TableHead, TableRow, TableCell };
+

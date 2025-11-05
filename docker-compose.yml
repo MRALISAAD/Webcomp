@@ -1,47 +1,32 @@
 version: "3.9"
+
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
     container_name: marhaban_backend
-    restart: always
+    environment:
+      - NODE_ENV=development
+      - PORT=4000
+      - CORS_ORIGIN=http://localhost:5173
     ports:
-      - "5000:5000"
-    env_file:
-      - ./backend/.env
-    networks:
-      - marhaban_net
+      - "4000:4000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm run dev"
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
     container_name: marhaban_frontend
-    restart: always
+    environment:
+      - VITE_API_URL=http://localhost:4000
     ports:
-      - "80:80"
-    depends_on:
-      - backend
-    networks:
-      - marhaban_net
-
-  caddy:
-    image: caddy:latest
-    restart: always
-    ports:
-      - "80:80"
-      - "443:443"
+      - "5173:5173"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
+      - ./frontend:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm run dev -- --host"
     depends_on:
-      - frontend
       - backend
-    networks:
-      - marhaban_net
-
-networks:
-  marhaban_net:
-    driver: bridge
-
-volumes:
-  caddy_data:
-  caddy_config:

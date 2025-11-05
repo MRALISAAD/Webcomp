@@ -3,7 +3,7 @@ import { cn } from "../../lib/utils";
 const Card = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "rounded-2xl border border-zinc-200 bg-white/80 p-6 shadow-sm backdrop-blur transition-colors dark:border-zinc-800 dark:bg-zinc-900/70",
+      "rounded-2xl border border-gold/20 bg-white/95 p-6 shadow-sm backdrop-blur transition duration-300 ease-out hover:scale-[1.02] hover:shadow-md dark:border-gold/20 dark:bg-navyLight/85",
       className
     )}
     {...props}
@@ -15,15 +15,15 @@ const CardHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement
 );
 
 const CardTitle = ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn("text-xl font-semibold text-ink dark:text-zinc-100", className)} {...props} />
+  <h3 className={cn("text-xl font-semibold text-textDark dark:text-textLight", className)} {...props} />
 );
 
 const CardDescription = ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
-  <p className={cn("text-sm text-zinc-600 dark:text-zinc-300", className)} {...props} />
+  <p className={cn("text-sm text-mutedLight dark:text-mutedDark", className)} {...props} />
 );
 
 const CardContent = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("space-y-4 text-sm text-zinc-600 dark:text-zinc-300", className)} {...props} />
+  <div className={cn("space-y-4 text-sm text-mutedLight dark:text-mutedDark", className)} {...props} />
 );
 
 const CardFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (

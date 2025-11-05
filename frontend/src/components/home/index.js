@@ -1,0 +1,12 @@
+export { default as HeroSection } from "./HeroSection.jsx";
+export { default as WhySection } from "./WhySection.jsx";
+export { default as PacksSection } from "./PacksSection.jsx";
+export { default as ProcessSection } from "./ProcessSection.jsx";
+export { default as ContactAction } from "./ContactAction.jsx";
+export { default as PresenceSection } from "./PresenceSection.jsx";
+export { default as TechnologySection } from "./TechnologySection.jsx";
+export { default as SocialSection } from "./SocialSection.jsx";
+export { default as AboutSection } from "./AboutSection.jsx";
+export { default as TestimonialsSection } from "./TestimonialsSection.jsx";
+export { default as ResourcesSection } from "./ResourcesSection.jsx";
+export { default as FAQSection } from "./FAQSection.jsx";

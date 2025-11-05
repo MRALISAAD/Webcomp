@@ -1,0 +1,17 @@
+input, textarea, select {
+  @apply w-full rounded-xl border border-gray-400/30 bg-white p-3 text-grayText transition
+    placeholder:text-grayText/70 focus:outline-none focus:ring-2 focus:ring-primary
+    dark:bg-gray-900 dark:text-beige;
+}
+
+button {
+  @apply transition-all duration-200;
+}
+
+button:hover:not(:disabled) {
+  @apply scale-[1.02];
+}
+
+button:disabled {
+  @apply cursor-not-allowed opacity-50;
+}

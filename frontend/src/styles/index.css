@@ -10,12 +10,53 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: #faf5ef;
+  color: #0a2239;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark {
+  background-color: #0a2239;
+  color: #eaeaea;
+}
+
 body {
-  @apply bg-background text-ink antialiased transition-colors duration-200 dark:bg-zinc-950 dark:text-zinc-50;
+  @apply bg-marhaban-beige text-marhaban-blue font-sans antialiased transition-colors duration-300 ease-out;
+}
+
+.dark body {
+  @apply bg-marhaban-charcoal text-marhaban-beige;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-title text-marhaban-blue dark:text-marhaban-beige;
+}
+
+p,
+span,
+li {
+  @apply text-mutedLight dark:text-mutedDark;
+}
+
+strong {
+  @apply text-marhaban-blue dark:text-marhaban-beige;
+}
+
+button {
+  @apply rounded-full font-semibold transition-all duration-300 ease-out;
 }
 
 a {
-  @apply underline-offset-2;
+  @apply text-marhaban-blue underline-offset-2 transition-colors duration-300 dark:text-marhaban-beige;
+}
+
+a:hover {
+  @apply text-marhaban-gold dark:text-marhaban-gold;
 }
 
 a:focus-visible,
@@ -23,11 +64,11 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  @apply outline-none ring-2 ring-offset-2 ring-primary ring-offset-background;
+  @apply outline-none ring-2 ring-marhaban-blue ring-offset-2 ring-offset-marhaban-beige;
 }
 
 .container-responsive {
-  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-7xl px-[8%];
 }
 
 .sr-only {
@@ -43,6 +84,30 @@ select:focus-visible {
 }
 
 @layer utilities {
+  .bg-beige {
+    @apply bg-marhaban-beige;
+  }
+
+  .section-gradient-light {
+    @apply bg-gradient-to-b from-[#FAF5EF] via-[#e9edf5] to-[#112A46]/15;
+  }
+
+  .section-gradient-dark {
+    @apply bg-gradient-to-b from-[#112A46] via-[#0C1F35] to-[#0A2239];
+  }
+
+  .section-shell {
+    @apply relative py-20 transition-colors duration-300 ease-out;
+  }
+
+  .card-elevated {
+    @apply rounded-2xl border border-lineLight bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-marhaban-gold/20 dark:bg-marhaban-charcoal;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-lineLight bg-white shadow-sm dark:border-marhaban-gold/15 dark:bg-marhaban-charcoal;
+  }
+
   .animate-accordion-down {
     animation: accordion-down 0.25s ease-out;
   }
