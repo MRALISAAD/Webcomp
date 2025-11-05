@@ -37,14 +37,16 @@ const Home = () => {
         <meta property="og:description" content={og.description} />
         <meta property="og:url" content={og.url} />
         <meta property="og:type" content={og.type} />
-        {og.images?.[0] && <meta property="og:image" content={og.images[0].url} />}
+        {og.images?.[0] && (
+          <>
+            <meta property="og:image" content={og.images[0].url} />
+            <meta property="og:image:alt" content={og.images[0].alt || "Marhaban Canada"} />
+          </>
+        )}
         <meta property="og:site_name" content={og.siteName} />
         <meta property="og:locale" content={og.locale} />
-        <meta property="og:title" content="Marhaban Canada — Simplifier l’arrivée, humaniser l’intégration" />
-        <meta property="og:image" content="/images/skyline_montreal.webp" />
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(productsJsonLd)}</script>
-        <meta property="og:image:alt" content="Skyline de Montréal au coucher du soleil" />
       </Helmet>
 
       <HomeV2 />

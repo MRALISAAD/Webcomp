@@ -1,3 +1,0 @@
-{
-  "error": "depcheck unavailable offline; npx depcheck --json failed with getaddrinfo EAI_AGAIN (registry.npmjs.org)"
-}
