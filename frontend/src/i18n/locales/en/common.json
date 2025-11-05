@@ -8,7 +8,18 @@
     "blog": "Blog",
     "testimonials": "Testimonials",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ariaPrimary": "Primary navigation",
+    "ariaMobile": "Mobile navigation",
+    "menu": "Open menu",
+    "close": "Close menu"
+  },
+  "navbar": {
+    "home": "Home",
+    "packs": "Packs",
+    "partners": "Partners",
+    "contact": "Contact",
+    "book": "Book now"
   },
   "footer": {
     "legal": "Legal notice",
@@ -17,7 +28,14 @@
     "address": "Montreal, Quebec",
     "emailLabel": "Contact",
     "whatsappCta": "WhatsApp",
-    "rights": "© {{year}} Marhaban Canada. All rights reserved."
+    "tagline": "Simplifying your arrival in Canada 🇨🇦",
+    "quickLinks": "Quick links",
+    "contactTitle": "Contact",
+    "rights": "© {{year}} Marhaban Canada. All rights reserved.",
+    "rightsShort": "All rights reserved.",
+    "alt": {
+      "flag": "Canadian flag"
+    }
   },
   "hero": {
     "title": "Your arrival in Canada, stress-free.",
@@ -66,14 +84,158 @@
     "ctaAll": "View all testimonials"
   },
   "trust": {
-    "title": "Trusted partners"
+    "title": "Trusted partners",
+    "badge": "Already more than 300 newcomers accompanied 🇨🇦"
+  },
+  "partners": {
+    "title": "Partners",
+    "heading": "Our trusted partners",
+    "subtitle": "Work with industry leaders"
+  },
+  "process": {
+    "title": "How it works",
+    "subtitle": "In 4 simple steps",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Book your pack",
+        "description": "Choose the pack that suits your needs and book online."
+      },
+      {
+        "number": "2",
+        "title": "Prepare your documents",
+        "description": "We guide you to prepare all necessary documents."
+      },
+      {
+        "number": "3",
+        "title": "Arrive in Canada",
+        "description": "Airport welcome and transfer to your accommodation."
+      },
+      {
+        "number": "4",
+        "title": "Settle in",
+        "description": "Personalized follow-up during your installation and administrative procedures."
+      }
+    ],
+    "cta": "Discover the complete process"
+  },
+  "testimonials": {
+    "title": "They trusted us",
+    "subtitle": "Discover our clients' testimonials",
+    "ctaAll": "View all testimonials"
   },
   "pricing": {
     "title": "Choose your pack",
     "subtitle": "Flexible offers for every newcomer journey.",
     "featuresLabel": "Included services",
     "badgePopular": "Popular",
-    "badgeAllInclusive": "All inclusive"
+    "badgeAllInclusive": "All inclusive",
+    "note": "Pay now, settle in later.",
+    "basic": "Choose Basic",
+    "standard": "Choose Standard",
+    "premium": "Choose Premium"
+  },
+  "ctaFinal": {
+    "title": "Your arrival in Canada, stress-free.",
+    "subtitle": "Start your new journey today",
+    "primary": "Book my pack",
+    "secondary": "Talk to an advisor"
+  },
+  "home": {
+    "hero": {
+      "badge": "Marhaban Canada Pack",
+      "title": "Choose the perfect support for your <strong>settlement</strong>",
+      "subtitle": "Designed for students, families and professionals coming from France, Morocco or Algeria.",
+      "cta": "Book now",
+      "note": "We call you back within 24 hours with a tailored plan.",
+      "imageAlt": "Panoramic view of Montreal at sunset",
+      "points": [
+        "Full airport welcome",
+        "Guaranteed temporary housing",
+        "SIN • banking • telecom assistance",
+        "Dedicated advisor 7 days a week"
+      ]
+    },
+    "packs": {
+      "title": "Packs designed for every project",
+      "subtitle": "Three levels of support to prepare your new life in Canada.",
+      "cards": [
+        {
+          "name": "Essential Pack",
+          "price": "$299",
+          "description": "Get ready with the essentials and a dedicated advisor before you leave."
+        },
+        {
+          "name": "Comfort Pack",
+          "price": "$599",
+          "badge": "Popular",
+          "description": "Airport welcome, guaranteed temporary housing, key paperwork and 30-day follow-up."
+        },
+        {
+          "name": "Premium Pack",
+          "price": "$1,099",
+          "description": "We handle everything for your family: move, custom housing and unlimited support."
+        }
+      ],
+      "cta": "View all packs"
+    },
+    "comparison": {
+      "title": "Compare our services",
+      "subtitle": "Every pack includes the essentials with extra options based on your needs.",
+      "headers": ["Services", "Essential", "Comfort", "Premium"],
+      "rows": [
+        { "service": "Pre-departure preparation", "values": ["check", "check", "check"] },
+        { "service": "Installation guide & support", "values": ["check", "check", "check"] },
+        { "service": "Airport welcome", "values": ["dash", "check", "check"] },
+        { "service": "Temporary housing", "values": ["dash", "check", "check"] },
+        { "service": "Housing secured before arrival", "values": ["dash", "dash", "check"] },
+        { "service": "SIN / banking / SIM", "values": ["check", "check", "check"] },
+        { "service": "Post-arrival follow-up", "values": ["7 d", "30 d", "3 months"] },
+        { "service": "Private transport included", "values": ["dash", "dash", "check"] },
+        { "service": "Dedicated agent", "values": ["dash", "check", "check"] },
+        { "service": "Price", "values": ["$299", "$599", "$1,099"] }
+      ]
+    },
+    "booking": {
+      "title": "Ready to book your Marhaban pack?",
+      "subtitle": "We call you back within 24 hours with a personalised plan.",
+      "cta": "Book now"
+    },
+    "advisor": {
+      "title": "Need to talk with an advisor?",
+      "subtitle": "Our WhatsApp team replies 7 days a week from Montreal.",
+      "cta": "Chat on WhatsApp",
+      "badge": "Reply within 2 hours"
+    },
+    "alt": {
+      "arrival": "Student arriving at the airport",
+      "family": "Family welcomed in Montreal",
+      "montreal": "Montreal skyline at sunset"
+    }
+  },
+  "packs": {
+    "alt": {
+      "essentiel": "Passport held in hand",
+      "confort": "Modern and bright apartment",
+      "premium": "Family with suitcases"
+    }
+  },
+  "partners": {
+    "alt": {
+      "handshake": "Professional handshake",
+      "meeting": "Strategic team meeting"
+    }
+  },
+  "contact": {
+    "alt": {
+      "hero": "Marhaban Canada advisor welcoming a newcomer family",
+      "map": "Map of Canada on a bright desk"
+    }
+  },
+  "about": {
+    "alt": {
+      "student": "Student working on a laptop"
+    }
   },
   "faq": {
     "title": "FAQ",
@@ -174,6 +336,15 @@
     ]
   },
   "contact": {
+    "hero": {
+      "badge": "Marhaban support team",
+      "points": [
+        "Replies within 24 business hours",
+        "Advisors in French, English and Arabic",
+        "Support before and after arrival",
+        "Priority WhatsApp channel"
+      ]
+    },
     "title": "Contact",
     "subtitle": "Have a question or project? Write to us — we reply within 24h (business days).",
     "intro": "Have a question? Our team replies quickly. Write to us or reach out on WhatsApp.",
@@ -253,6 +424,22 @@
     "light": "Light mode",
     "dark": "Dark mode"
   },
+  "packs": {
+    "table": {
+      "title": "Compare features",
+      "features": "Features",
+      "airportWelcome": "Airport welcome",
+      "procedures": "SIN, bank, SIM card procedures",
+      "housing": "Temporary / guaranteed housing",
+      "transport": "Airport transport included",
+      "advice": "Installation advice",
+      "support": "Follow-up and support",
+      "unlimited": "Unlimited",
+      "chooseEssentiel": "Choose Essential",
+      "chooseConfort": "Choose Comfort",
+      "choosePremium": "Choose Premium"
+    }
+  },
   "seo": {
     "home": {
       "title": "Marhaban Canada — Settlement packs for newcomers",
@@ -293,6 +480,134 @@
       "title": "Page not found — Marhaban Canada",
       "description": "The page you requested does not exist or has moved.",
       "path": "/404"
+    }
+  },
+  "forms": {
+    "common": {
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "submit": "Send",
+      "sending": "Sending…",
+      "success": "Thank you! We’ll get back to you within 24 hours.",
+      "genericError": "Something went wrong, please try again.",
+      "errors": {
+        "fullName": "Please enter your full name.",
+        "email": "Please provide a valid email address.",
+        "phone": "Please provide a valid phone number.",
+        "pack": "Please select a pack."
+      }
+    },
+    "lead": {
+      "title": "Book your Marhaban pack",
+      "subtitle": "Our team will call you back within 24 hours to prepare your arrival.",
+      "select": "Choose a pack",
+      "success": "Thank you! Your request has been sent.",
+      "placeholder": {
+        "message": "Tell us about your plans or questions (optional)"
+      },
+      "packs": {
+        "essential": "Essential Pack",
+        "comfort": "Comfort Pack",
+        "premium": "Premium Pack",
+        "custom": "Custom Pack"
+      }
+    }
+  },
+  "packsPage": {
+    "intro": {
+      "eyebrow": "Marhaban Canada Packs",
+      "title": "Pick the plan that matches your journey",
+      "highlight": "journey",
+      "subtitle": "Tailored for students, families and professionals arriving from Morocco and Algeria.",
+      "cta": "Book now"
+    },
+    "packages": {
+      "essential": {
+        "title": "Essential Pack",
+        "price": "$299 CAD",
+        "badge": "",
+        "description": [
+          "Prepare your arrival with peace of mind.",
+          "We help you plan every detail — from paperwork to first steps on the ground.",
+          "Be independent and avoid mistakes with our remote support and complete guide."
+        ],
+        "cta": "Book Essential"
+      },
+      "comfort": {
+        "title": "Comfort Pack",
+        "price": "$599 CAD",
+        "badge": "Popular",
+        "description": [
+          "A stress-free arrival with real human support.",
+          "We welcome you, help you find temporary housing, and guide you through every administrative step.",
+          "You’ll never be alone — your advisor stays with you for 30 days."
+        ],
+        "cta": "Book Comfort"
+      },
+      "premium": {
+        "title": "Premium Family Pack",
+        "price": "$1,099 CAD",
+        "badge": "",
+        "description": [
+          "We handle everything — for you and your family.",
+          "Before you fly, we secure your housing, arrange your transfer, and stay with you for three full months.",
+          "Enjoy the experience, we take care of the details."
+        ],
+        "cta": "Book Premium"
+      }
+    },
+    "comparison": {
+      "title": "Compare our services",
+      "columns": {
+        "service": "Services",
+        "essential": "Essential",
+        "comfort": "Comfort",
+        "premium": "Premium"
+      },
+      "rows": [
+        { "service": "Pre-departure preparation", "essential": "check", "comfort": "check", "premium": "check" },
+        { "service": "Installation guide + support", "essential": "check", "comfort": "check", "premium": "check" },
+        { "service": "Airport welcome", "essential": "dash", "comfort": "check", "premium": "check" },
+        { "service": "Temporary housing", "essential": "dash", "comfort": "check", "premium": "check" },
+        { "service": "Housing secured before arrival", "essential": "dash", "comfort": "dash", "premium": "check" },
+        { "service": "NAS / bank / SIM setup", "essential": "partial", "comfort": "check", "premium": "check" },
+        { "service": "Post-arrival follow-up", "essential": "7 days", "comfort": "30 days", "premium": "3 months" },
+        { "service": "Private transport included", "essential": "no", "comfort": "no", "premium": "check" },
+        { "service": "Dedicated advisor", "essential": "no", "comfort": "check", "premium": "check" },
+        { "service": "Price", "essential": "$299", "comfort": "$599", "premium": "$1,099" }
+      ]
+    },
+    "cta": {
+      "title": "Ready to secure your Marhaban pack?",
+      "subtitle": "We’ll call you back within 24 hours with a tailored plan.",
+      "button": "Book now"
+    },
+    "modal": {
+      "title": "Book the {{pack}}",
+      "fields": {
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone (WhatsApp)",
+        "pack": "Selected pack",
+        "submit": "Send my request"
+      },
+      "success": "Thank you, we’ll contact you within 24 hours.",
+      "error": "We couldn’t send your request. Please try again.",
+      "validation": {
+        "name": "Please add your full name.",
+        "email": "Please add a valid email.",
+        "phone": "Please add a valid phone number."
+      },
+      "close": "Close",
+      "privacy": "Your information is confidential and will never be shared."
+    },
+    "contact": {
+      "title": "Want to talk with an advisor?",
+      "subtitle": "Our WhatsApp team replies 7 days a week from Montreal.",
+      "button": "Chat on WhatsApp",
+      "note": "Reply within 2 hours",
+      "whatsappUrl": "https://wa.me/15146910262?text=Hello%20Marhaban%20Canada%2C%20I%E2%80%99d%20like%20to%20learn%20more%20about%20your%20packs."
     }
   }
 }
