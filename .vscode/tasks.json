@@ -1,0 +1,98 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Démarrer Tout (dev.sh)",
+      "type": "shell",
+      "command": "./dev.sh",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "🔙 Démarrer Backend",
+      "type": "shell",
+      "command": "cd backend && npm run dev",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "🎨 Démarrer Frontend",
+      "type": "shell",
+      "command": "cd frontend && npm run dev",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "🔍 Vérifier l'Environnement",
+      "type": "shell",
+      "command": "./check.sh",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "📦 Installer les Dépendances",
+      "type": "shell",
+      "command": "./setup.sh",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "🏗️ Build Frontend",
+      "type": "shell",
+      "command": "cd frontend && npm run build",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "✅ TypeCheck Frontend",
+      "type": "shell",
+      "command": "cd frontend && npm run typecheck",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "🧹 Lint Frontend",
+      "type": "shell",
+      "command": "cd frontend && npm run lint",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "🧪 Tests Frontend",
+      "type": "shell",
+      "command": "cd frontend && npm test",
+      "problemMatcher": []
+    }
+  ]
+}
