@@ -7,10 +7,10 @@ services:
     container_name: marhaban_backend
     environment:
       - NODE_ENV=development
-      - PORT=4000
+      - PORT=8080
       - CORS_ORIGIN=http://localhost:5173
     ports:
-      - "4000:4000"
+      - "8080:8080"
     volumes:
       - ./backend:/app
       - /app/node_modules
@@ -21,7 +21,7 @@ services:
       context: ./frontend
     container_name: marhaban_frontend
     environment:
-      - VITE_API_URL=http://localhost:4000
+      - VITE_API_BASE_URL=http://localhost:8080/api
     ports:
       - "5173:5173"
     volumes:
