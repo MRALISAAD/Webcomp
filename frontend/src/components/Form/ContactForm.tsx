@@ -31,15 +31,15 @@ const formSchema = z.object({
   country: z.string().optional().transform((value) => value?.trim() ?? ""),
   desiredPack: z.enum(packOptions),
   message: z.string().trim().min(20, "form.errors.message"),
-  consent: z.literal(true, {
-    errorMap: () => ({ message: "form.errors.consent" }),
+  consent: z.boolean().refine((val) => val === true, {
+    message: "form.errors.consent",
   }),
 });
 
 type FormSchema = z.infer<typeof formSchema>;
 
 interface ContactFormProps {
-  defaultPack?: "Basique" | "Standard" | "Premium";
+  defaultPack?: "" | "Essentiel" | "Confort" | "Premium";
 }
 
 const ContactForm = ({ defaultPack }: ContactFormProps) => {
