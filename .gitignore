@@ -24,3 +24,5 @@ dist/
 .vscode/
 .idea/
 *.log
+.env.bak
+*.bak
