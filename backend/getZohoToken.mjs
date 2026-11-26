@@ -1,12 +1,12 @@
 import axios from "axios";
 
 // 🧩 Étape 1 : colle ici ton code Zoho (après ?code=)
-const code = "1000.81eb61cc94d3f0bd23fbf22ce54627d5.da5c7b8e3aa2b95f0d2ba70780afff91";
+const code = process.argv[2] ?? process.env.ZOHO_AUTH_CODE; // usage : node getZohoToken.mjs <code>
 
 const data = new URLSearchParams({
   grant_type: "authorization_code",
-  client_id: "1000.W8VSTDXMF5F08DYIN2HBKLFSC1BM7B",
-  client_secret: "d1a418e18a63bcfe63f99d0e420730c30e9934caf8",
+  client_id: process.env.ZOHO_CLIENT_ID,
+  client_secret: process.env.ZOHO_CLIENT_SECRET,
   redirect_uri: "http://localhost:8080/api/zoho/callback",
   code,
 });
